@@ -1,19 +1,159 @@
-# iA Presenter RAG Repository
+# iA Presenter Know-How Repository
 
-> **Retrieval-Augmented Generation knowledge base for creating beautiful presentations in iA Presenter**
+> **Complete knowledge base for creating beautiful presentations in iA Presenter**
 
-> **⚠️ This is a non-commercial project created to help LLMs generate valid iA Presenter presentations. All content is based on official iA Presenter documentation and is provided for free.**
+> **⚠️ This is a community-driven project collecting best practices, tips, and examples for creating effective iA Presenter presentations. All content is based on official iA Presenter documentation and community contributions.**
 
 ---
 
 ## 📖 About
 
-This repository contains a comprehensive knowledge base designed to help any Large Language Model (LLM) generate valid, beautiful presentations in iA Presenter's Markdown format.
+This repository is a comprehensive knowledge base for iA Presenter, collecting documentation, best practices, tips, and examples from various sources.
 
-The RAG system is optimized for:
-- **Beginner users** who need guidance on creating presentations
-- **LLMs** that need clear, actionable documentation
-- **Quick reference** for iA Presenter syntax and features
+Perfect for:
+- **Beginners** who need guidance on creating presentations
+- **Advanced users** looking for advanced techniques and patterns
+- **Developers** integrating iA Presenter with AI/LLM systems
+- **Anyone** who wants to create beautiful, effective presentations
+
+### Our Mission
+
+To create the most complete, up-to-date, and practical collection of iA Presenter knowledge - all in one place, freely accessible to everyone.
+
+---
+
+## 💡 Share Your Best Practices
+
+This repository grows through community contributions! We're collecting real-world tips and techniques from iA Presenter users worldwide.
+
+### What We're Looking For
+
+**Your tips could include:**
+- ✨ Unique layout patterns you've discovered
+- 🎯 Best practices for specific use cases (business, academic, creative)
+- 💡 Workflow optimizations that save time
+- 📝 Effective presentation structures and templates
+- 🎨 Theme customization tips
+- ⚡ Keyboard shortcuts and productivity hacks
+- 🎭 Delivery techniques that work with iA Presenter
+
+**Got a unique way to use iA Presenter? Share it!**
+
+### How Your Contributions Help
+
+- 📚 **Learners benefit** from your experience
+- 🤖 **AI systems** learn from real examples
+- 👥 **Community grows** through shared knowledge
+- 🔧 **Tool improves** with user feedback
+- 🌍 **Knowledge spreads** across languages and cultures
+
+### Quick Examples
+
+"Instead of using bullet points for comparisons, I use side-by-side layouts with minimal text on each side. It creates better engagement!"
+
+"I found that putting images in the `assets/` folder and referencing them locally makes presentations much faster to load."
+
+"For technical presentations, I create a glossary slide at the end - it saves questions during Q&A!"
+
+---
+
+## 🤝 How to Contribute
+
+Sharing your knowledge is easy! Here's how:
+
+### Step 1: Document Your Tip
+
+1. Create a new markdown file in `docs/02-tips/community/` (create directory if needed)
+2. Use a clear filename: `your-tip-title.md`
+3. Include:
+   - A descriptive title
+   - Brief description of the use case
+   - Example code/presentation snippet
+   - Why this approach works
+
+### Step 2: Format Your Contribution
+
+```markdown
+# Your Tip Title
+
+> **Use case:** Briefly describe when to use this tip
+
+## What It Solves
+
+Explain what problem or challenge this tip addresses.
+
+## How It Works
+
+Provide step-by-step explanation or example:
+
+\`\`\`markdown
+## Example Slide
+
+	This content shows the technique
+\`\`\`
+
+## Why This Works
+
+Explain why this approach is effective.
+
+## Tips & Variations
+
+- Variation 1
+- Variation 2
+- Common pitfalls to avoid
+```
+
+### Step 3: Submit Your Contribution
+
+**Option A: GitHub Pull Request (Recommended)**
+1. Fork this repository
+2. Create a new branch: `git checkout -b add-your-tip-name`
+3. Add your file to `docs/02-tips/community/`
+4. Commit changes: `git commit -m "Add tip: Your Tip Title"`
+5. Push to your fork: `git push origin add-your-tip-name`
+6. Open Pull Request on GitHub
+
+**Option B: GitHub Issue**
+1. Go to [Issues](https://github.com/pdurlej/ia-presenter-rag/issues)
+2. Click "New Issue"
+3. Use template: "Share a tip or best practice"
+4. Paste your markdown content
+
+**Option C: Email/DM**
+- Email: `[Your email]`
+- DM on social platforms
+
+### Step 4: What Happens Next
+
+1. ✅ We review your contribution
+2. 💬 We may ask for clarification or examples
+3. 🎉 Approved contributions are merged
+4. 📖 Your tip becomes part of the knowledge base
+5. ⭐ Contributors are credited in the repository
+
+### Contribution Guidelines
+
+**DO:**
+- ✅ Be clear and concise
+- ✅ Provide working examples
+- ✅ Explain WHY something works
+- ✅ Include use cases for your tip
+- ✅ Test your examples in iA Presenter
+
+**DON'T:**
+- ❌ Submit content that's already documented
+- ❌ Share tips that don't work
+- ❌ Post without examples
+- ❌ Use copyrighted material without permission
+
+### Recognition
+
+All contributors are credited! We'll add your name/handle to:
+- The repository's CONTRIBUTORS file
+- Each tip you contribute
+- Our periodic "Community Highlights" posts
+
+---
 
 ---
 
@@ -37,9 +177,9 @@ The RAG system is optimized for:
 
 ---
 
-## 🚀 Quick Start for LLMs
+## 🚀 Quick Start for Creating Presentations
 
-When generating an iA Presenter presentation:
+When creating an iA Presenter presentation:
 
 ### 1. Start with the structure:
 
@@ -222,10 +362,11 @@ ia-presenter-rag/
 2. Explore `docs/02-tips/` directory
 3. Study `examples/03-anti-patterns.md`
 
-### For LLM Developers
+### For AI/LLM Integration
 1. Use `examples/` as few-shot examples
 2. Reference `syntax/00-complete-reference.md` for validation
 3. Apply patterns from all documentation
+4. Use community tips from `docs/02-tips/community/` for real-world insights
 
 ---
 
@@ -251,31 +392,34 @@ ia-presenter-rag/
 
 ## 🔧 For AI and LLM Integration
 
-This repository is designed to work with any LLM:
+This repository is designed to work with any LLM or AI system:
 - ✅ GPT-4 / GPT-4o
 - ✅ Claude 3 / Claude 3.5
 - ✅ Llama 3 / Llama 3.1
-- ✅ Local models (Ollama, LM Studio)
+- ✅ Local models (Ollama, LM Studio, GPT4All)
+- ✅ Custom fine-tuned models
 
 **No framework required** - use plain text context!
 
-### Retrieval Strategy
+### Building Knowledge Context
 
-For optimal RAG performance:
+For optimal results:
 1. Start with `syntax/00-complete-reference.md` for rules
 2. Include relevant `examples/` for few-shot learning
 3. Reference `docs/02-tips/` for best practices
-4. Use `docs/01-course/` for step-by-step guidance
+4. Include community tips from `docs/02-tips/community/` for real-world patterns
+5. Use `docs/01-course/` for step-by-step guidance
 
 ---
 
 ## 📊 Status
 
-- ✅ Content acquisition (23 sources complete)
-- ✅ Syntax documentation complete
-- ✅ Example presentations (3 created)
-- ✅ RAG structure optimized
-- 🚧 Phase 2: Patterns and advanced guides (planned)
+- ✅ Official documentation (6 courses + 12 tips)
+- ✅ Complete syntax reference
+- ✅ Working example presentations (3 examples)
+- ✅ Community contributions system ready
+- 🚧 Phase 2: Advanced patterns and guides (planned)
+- 📊 **Community tips**: Check `docs/02-tips/community/` for user contributions!
 
 ---
 
@@ -296,47 +440,59 @@ This repository is a derivative work based on official iA Presenter documentatio
 
 ---
 
-## 🚀 Usage Example for LLMs
+## 🚀 Usage Example for AI/LLM Integration
 
-### Context Construction
+### Building Knowledge Context
 
 When using this repository for RAG:
 
 ```python
-# Example: How to construct context for iA Presenter generation
+# Example: Building knowledge context for iA Presenter
 
-def get_ia_presenter_context(query):
+def build_presenter_knowledge_context(user_topic, complexity="beginner"):
     """
-    Constructs optimized context for iA Presenter presentation generation.
+    Constructs optimal context for iA Presenter presentation generation.
+    Combines official docs, examples, and community tips.
     """
     # Get syntax rules
     syntax_rules = read_file("syntax/00-complete-reference.md")
 
     # Get relevant examples
     examples = []
-    if "beginner" in query:
+    if complexity == "beginner":
         examples.append(read_file("examples/01-basic.md"))
     else:
         examples.append(read_file("examples/02-complex.md"))
 
-    # Get relevant tips
-    tips = read_files_from_dir("docs/02-tips/", limit=3)
+    # Get relevant tips from official docs
+    official_tips = read_files_from_dir("docs/02-tips/", limit=3)
 
-    # Combine with query-specific content
+    # Get community tips (if any)
+    try:
+        community_tips = read_files_from_dir("docs/02-tips/community/", limit=2)
+    except:
+        community_tips = []
+
+    # Combine all knowledge sources
     context = f"""
     iA PRESENTER SYNTAX RULES:
     {syntax_rules}
 
-    EXAMPLES:
+    OFFICIAL EXAMPLES:
     {''.join(examples)}
 
-    BEST PRACTICES:
-    {''.join(tips)}
+    OFFICIAL BEST PRACTICES:
+    {''.join(official_tips)}
 
-    USER QUERY:
-    {query}
+    COMMUNITY TIPS:
+    {''.join(community_tips) if community_tips else "No community tips yet. Be the first to contribute!"}
+
+    USER TOPIC:
+    {user_topic}
+
+    Generate a presentation following iA Presenter Markdown syntax.
+    Focus on creating a compelling story with minimal slide text.
     """
-
     return context
 ```
 
@@ -364,7 +520,20 @@ Generate valid iA Presenter Markdown that can be imported directly.
 
 ## 🤝 Contributing
 
-Contributions are welcome! Areas for enhancement:
+This is a **community-driven know-how repository** - it grows with your contributions!
+
+### Share Your Knowledge
+
+Have you discovered a unique pattern, tip, or technique for iA Presenter? Share it with the community!
+
+**Ways to contribute:**
+- 📝 Share a tip or best practice (see "Share Your Best Practices" above)
+- 🎨 Add example presentations
+- 🌍 Translate documentation to other languages
+- 🐛 Fix bugs or improve documentation
+- 💡 Suggest new features or patterns
+
+### Areas for Enhancement
 - Additional example presentations
 - More use case patterns
 - Troubleshooting guides
