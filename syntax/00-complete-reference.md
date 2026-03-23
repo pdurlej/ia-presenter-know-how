@@ -275,21 +275,24 @@ iA Presenter supports multiple export formats:
 ## Subtitle
 
 ---
-## Agenda
+## What this deck covers
 
-	Introduction
-	Main content
-	Q&A
-	Conclusion
+Context for the audience about what to expect.
+
+	1. The core problem
+	2. What changed
+	3. What we recommend
 
 ---
-## 1. Introduction
+## The core problem
 
-Speaker notes about introduction...
+Speaker notes explain the full context here.
 
-	Key point 1
-	Key point 2
+	Key visible point 1
+	Key visible point 2
 ```
+
+**Note:** Use `#` only for the cover slide. Use `##` for content slide titles after `---`. Do not use `#` for mid-deck section breaks.
 
 ### Comparison Slide
 
@@ -327,20 +330,22 @@ This image illustrates our core concept.
 ## Best Practices
 
 ### DO:
-- ✅ Use TAB characters for slide content (not spaces)
-- ✅ Keep slide text minimal (3-5 points max)
-- ✅ Use short, punchy headlines
-- ✅ Let speech carry the detailed information
-- ✅ Test your presentation in iA Presenter before sharing
-- ✅ Use meaningful images that support your story
+- Use TAB characters for slide content (not spaces)
+- Keep slide text to 3-5 points maximum
+- Use short, punchy headlines that carry momentum
+- Let speech carry transitions, caveats, and detailed reasoning
+- Vary the visible slide surface — mix heading stacks, quotes, tables, contrasts, and one-line landings
+- End with a real action, decision, or landing line
+- Test your presentation in iA Presenter before sharing
 
 ### DON'T:
-- ❌ Use spaces instead of TABS
-- ❌ Put walls of text on slides
-- ❌ Read from your slides
-- ❌ Use generic stock images without purpose
-- ❌ Overuse bullet points
-- ❌ Mix speech and slide content on same line
+- Use spaces instead of TABs
+- Put walls of text on slides
+- Read from your slides
+- Hide the entire argument in speaker notes while slides show only titles and tiny bullets
+- End with "Thank You" or "Questions?" as the final slide
+- Use the same slide silhouette for the whole deck
+- Use `#` for mid-deck section breaks (reserve `#` for the cover)
 
 ---
 
@@ -349,11 +354,12 @@ This image illustrates our core concept.
 | Element | Syntax | Visibility |
 |---------|--------|------------|
 | Cover title | `# Title` | Always |
-| Subtitle | `## Subtitle` | Always |
+| Cover subtitle | `## Subtitle` | Always |
 | Slide break | `---` | N/A |
 | Content slide title | `## Slide Title` | Always |
-| Slide content | `⇥Text` | Audience |
-| Speaker notes | `Text` (no tab) | Presenter only |
+| Heading stack | `### Main` / `#### Qualifier` | Always |
+| Slide content | `⇥Text` (TAB prefix) | Audience |
+| Speaker notes | `Text` (no TAB) | Presenter only |
 | Bold | `**text**` | As positioned |
 | Italic | `*text*` | As positioned |
 | Link | `[text](url)` | As positioned |
@@ -383,9 +389,9 @@ This image illustrates our core concept.
 
 ## Examples in This Repository
 
-- `examples/01-basic.md` - Minimal working example
-- `examples/02-complex.md` - Full-featured demo
-- `examples/03-anti-patterns.md` - Common mistakes
+- `examples/01-basic.md` — Minimal working deck with correct syntax and a strong ending
+- `examples/02-complex.md` — Full-featured deck demonstrating all major surface patterns
+- `examples/03-anti-patterns.md` — Common mistakes with corrected versions
 
 ---
 

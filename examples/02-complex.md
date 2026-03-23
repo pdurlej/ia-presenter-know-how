@@ -1,277 +1,144 @@
 # Complete iA Presenter Example
 
-> **A comprehensive presentation showcasing all iA Presenter syntax and features.**
+> **A comprehensive presentation showcasing all major iA Presenter surface patterns and syntax features.**
+>
+> **This example demonstrates heading stacks, contrasts, quotes, tables, sequences, one-line landings, and proper speaker notes.**
 
 ---
 
-# Mastering iA Presenter
-
-## Your guide to creating beautiful presentations
-
----
-
-## What You'll Learn
-
-	1. Core syntax rules
-	2. Text formatting
-	3. Layout patterns
-	4. Image handling
-	5. Best practices
+# The Onboarding Tax
+## Why new hires stay slow longer than they should
 
 ---
+## What this deck covers
 
-# 1. Core Syntax
+Set expectations early so the audience knows where the argument is going.
 
-## The Hierarchy System
-
-iA Presenter uses headings to structure your presentation:
-
-`# Title` → Cover page
-
-`## Subtitle` → Cover subtitle
-
-`---` → New slide
-
-`## Slide Title` → Slide title
+	1. The real cost of slow onboarding
+	2. Where the friction actually lives
+	3. What one team changed
+	4. A pilot you can steal
 
 ---
+### The number nobody tracks
+#### Time to first autonomous decision
 
-## Speech vs Slide Text
-
-This is speaker notes. Only you see this.
-
-	This text appears on the slide. Audience sees this.
-
-This is also speaker notes.
-
-	And this is slide text too.
+Most onboarding metrics measure completion — courses finished, docs read, boxes checked. None of them measure when someone can actually make a call without asking.
 
 ---
+## Current onboarding
+#### VS
+## First real contribution
 
-# 2. Text Formatting
+This contrast reframes the problem. The audience should feel the gap between what the company measures and what actually matters.
 
-## Bold and Italic
+	Courses completed in week 1
 
-**Bold text** for emphasis
-
-*Italic text* for subtle emphasis
-
-**Combined *both* formats**
-
----
-
-## Lists
-
-Ordered lists work well for sequential ideas:
-
-	1. First point
-	2. Second point
-	3. Third point
-
-Unordered lists for loose ideas:
-
-	- Point one
-	- Point two
-	- Point three
+	First confident decision in week 8
 
 ---
+### Where the friction lives
 
-## Links and Quotes
+Do not list everything. Pick the three that hurt the most.
 
-### External Links
-
-	[Visit iA Presenter](https://ia.net/presenter)
-
-### Block Quotes
-
-	> "The only way to learn to speak... is to speak."
-	> — Dale Carnegie
+	Context is scattered
+	Tribal knowledge is oral
+	Feedback loops are slow
 
 ---
+### What new hires actually say
 
-# 3. Layout Patterns
+Let the voice of the user carry the argument here.
 
-## Stacked Layout (Default)
-
-Content stacks vertically on the slide:
-
-	First section of content
-
-	Second section of content
-
-	Third section of content
+	> "I finished all the training, but I still did not know who to ask."
+	> — Engineer, month two
 
 ---
+## What One Team Changed
 
-## Side-by-Side Layout
-
-	Left panel content visible to audience
-
-	Right panel content visible to audience
+This section reset signals a shift from problem to solution.
 
 ---
+### Three moves, not a transformation
 
-## Three-Column Layout
+Good case studies show restraint.
 
-	Column one content
-
-	Column two content
-
-	Column three content
+	1. Wrote down the five most common first-week questions
+	2. Paired every new hire with a decision buddy
+	3. Replaced the 40-page wiki with a one-page cheat sheet
 
 ---
+### Before and after
 
-# 4. Images
+Keep the table small enough to scan in one glance.
 
-## Basic Image
+	| Signal | Before | After 90 days |
+	|---|---|---|
+	| Time to first solo PR | 6 weeks | 2 weeks |
+	| Questions to manager per day | 8 | 3 |
+	| "I feel productive" survey | 34% | 71% |
 
-	![A beautiful landscape](/assets/landscape.jpg)
+---
+### What surprised them
+
+Every good story needs one human moment.
+
+	> "The cheat sheet mattered less than knowing someone expected me to use it."
+
+---
+### The pattern worth copying
+
+This slide converts the story into a portable principle.
+
+	Simple documentation beats comprehensive documentation.
+	A named person beats a wiki link.
+	Permission to decide beats permission to ask.
+
+---
+### What this costs
+
+Address the objection before it forms.
+
+	Two hours to write the cheat sheet
+	One buddy assignment per new hire
+	One retro at day 30
+
+---
+## Images and Code
+
+This section demonstrates additional syntax features for reference.
+
+---
+### Image syntax
+
+Images use TAB-prefixed Markdown image syntax with optional attributes.
+
+	![Onboarding flow diagram](/assets/onboarding-flow.jpg)
 	size: contain
 
-This image demonstrates the `size: contain` attribute.
+In this repository, image paths under `/assets/` are illustrative syntax examples.
 
 ---
+### Code on slides
 
-## Images with Opacity
-
-	![Image with transparency](/assets/photo.jpg)
-	size: contain
-	opacity: 0.7
-
-You can adjust transparency from 0.1 to 1.0.
-
----
-
-## Image Filters
-
-	![Grayscale image](/assets/colorful.jpg)
-	size: contain
-	filter: grayscale
-
-Available filters include `grayscale`, `sepia`, and more.
-
----
-
-# 5. Advanced Features
-
-## Code Blocks
-
-### Python Example
+Code blocks work inside TAB-prefixed content.
 
 	```python
-	def greet(name):
-	    print(f"Hello, {name}!")
+	def first_week_checklist(hire):
+	    return [q for q in COMMON_QUESTIONS if not hire.has_answered(q)]
 	```
 
-Use code blocks for technical presentations.
+---
+### Side-by-side images
+
+Separate visible content blocks with a blank line (no TAB) to create columns.
+
+	![Before](/assets/before-wiki.jpg)
+
+	![After](/assets/after-cheatsheet.jpg)
 
 ---
+## Pick one team.
+#### Run the pilot for 30 days. Measure confidence, not completion.
 
-## Tables
-
-### Team Members
-
-	| Name | Role | Department |
-	|------|------|------------|
-	| Alice | Lead | Design |
-	| Bob | Senior | Engineering |
-	| Carol | Junior | Marketing |
-
----
-
-## Multiple Images
-
-	![Product screenshot](/assets/product.jpg)
-
-	![Team photo](/assets/team.jpg)
-
-Images can be placed side-by-side or stacked.
-
----
-
-# 6. Comparison Examples
-
-## This Side
-
-Content for the left panel showing option A.
-
-This is additional detail about option A.
-
-## That Side
-
-Content for the right panel showing option B.
-
-More information about option B.
-
----
-
-# 7. Common Patterns
-
-## Title and Bullet Points
-
-Main concept explained here:
-
-	First supporting detail
-	Second supporting detail
-	Third supporting detail
-
-Remember to keep it minimal.
-
----
-
-## Quote and Context
-
-The quote sets the tone:
-
-	> "Simplicity is the ultimate sophistication."
-	> — Leonardo da Vinci
-
-This explains why minimal design matters.
-
----
-
-## Image with Explanation
-
-	![Visual representation](/assets/diagram.jpg)
-
-The diagram illustrates our core concept.
-
----
-
-# Best Practices Summary
-
-## DO
-
-	✅ Use TABS for slide content
-	✅ Keep text minimal
-	✅ Tell a great story
-	✅ Use meaningful images
-	✅ Practice your delivery
-
-## DON'T
-
-	❌ Read from slides
-	❌ Use spaces instead of TABS
-	❌ Put walls of text
-	❌ Use generic stock images
-	❌ Overuse bullet points
-
----
-
-# Conclusion
-
-## Ready to Create
-
-You now have all the tools to create beautiful presentations in iA Presenter.
-
-## Start Your Story
-
-Focus on your message first. Everything else follows naturally.
-
----
-
-# Thank You
-
-## Questions?
-
-Let's continue the discussion!
+The ask is concrete enough to approve in the room. Do not dilute it with a recap.

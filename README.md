@@ -23,9 +23,9 @@ This is not an official iA Presenter repository. iA Presenter is a commercial pr
 ## What Is Included
 
 - `syntax/00-complete-reference.md`: master syntax reference for prompt context and validation
-- `examples/01-basic.md`: minimal working example
-- `examples/02-complex.md`: larger example covering more patterns
-- `examples/03-anti-patterns.md`: common mistakes and corresponding fixes
+- `examples/01-basic.md`: minimal working deck with correct syntax, varied surfaces, and a strong ending
+- `examples/02-complex.md`: full-featured deck demonstrating all major surface patterns
+- `examples/03-anti-patterns.md`: common mistakes with corrected versions showing proper fixes
 - `skills/ia-presenter-deck/`: canonical repo-first skill for generating and improving `.iapresenter` decks
 - `golden-candidates/`: first-pass decks for iterative feedback and future Golden Deck development
 - `docs/01-course/`: six tutorial-style documents based on official how-to material
@@ -122,12 +122,14 @@ Prompt starter:
 You are generating iA Presenter Markdown.
 
 Rules:
-1. Use # and ## for the cover slide.
+1. Use # and ## for the cover slide only. Do not use # for mid-deck sections.
 2. Use --- for slide breaks.
 3. Use ## for content slide titles in this corpus.
 4. Use TAB characters for audience-visible slide content.
 5. Use speaker notes for transitions, nuance, and caveats.
 6. Make the visible slide surface carry real meaning instead of hiding the whole argument in notes.
+7. End with a real action, decision, or landing line. Do not end on "Thank you" or "Questions?".
+8. Vary the visible surface across the deck.
 
 Task:
 [USER TOPIC]
@@ -168,6 +170,7 @@ Deck packaging note:
 ```text
 ia-presenter-know-how/
 ├── README.md
+├── CLAUDE.md
 ├── LICENSE
 ├── DEPLOYMENT_CHECKLIST.md
 ├── GITHUB_SETUP.md

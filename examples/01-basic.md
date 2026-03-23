@@ -1,108 +1,52 @@
 # Basic Presentation Example
 
 > **A minimal, working iA Presenter presentation demonstrating core syntax.**
+>
+> **This example follows the conventions defined in `syntax/00-complete-reference.md` and matches the quality direction of `golden-candidates/`.**
 
 ---
 
-# Introduction to iA Presenter
-
-## Create beautiful presentations fast
-
----
-
-## What is iA Presenter?
-
-A story-based presentation app that helps you focus on what you want to say.
+# Why We Ship on Fridays
+## A case for calmer releases
 
 ---
+## The pattern everyone knows
 
-## Key Features
+Most teams treat Friday deploys as dangerous. But the real danger is not the day — it is the process around it.
 
-	1. Text-first approach
-	2. Automatic layouts
-	3. Built-in themes
-	4. Responsive design
-	5. Easy sharing
-
----
-
-## Get Started
-
-Focus on your story. Add visuals later.
+	1. Big batch lands Thursday night
+	2. Deploy Friday morning
+	3. Nobody watches the dashboard
+	4. Monday starts with a fire
 
 ---
+## Friday is not the problem
+#### The batch is.
 
-# Why iA Presenter?
-
-## Traditional Apps
-
-Traditional presentation apps start with design, not content.
+The risk scales with change size, not with the calendar. A small, well-tested deploy on Friday is safer than a large, rushed one on Tuesday.
 
 ---
+## What changes when deploys get small
 
-## The Problem
+This is the core argument. If the audience believes this, the rest follows.
 
-	- Too much time on formatting
-	- Distraction from your message
-	- Reading from slides
-	- Generic stock images
-
----
-
-## The Solution
-
-Start with your story in plain text. Design happens automatically.
+	Smaller diffs
+	Faster reviews
+	Shorter blast radius
 
 ---
+## One week of data
 
-# How It Works
+Real proof beats philosophy. Keep the table tiny.
 
-## Write Your Script
-
-Use Markdown to write what you want to say.
-
----
-
-## Add Visuals
-
-Drag and drop images, or use Unsplash integration.
+	| Metric | Big batch | Small daily |
+	|---|---|---|
+	| Rollback rate | 14% | 2% |
+	| Time to detect | 3h | 18min |
+	| On-call pages | 7 | 1 |
 
 ---
+## Start with one service.
+#### Measure confidence before expanding.
 
-## Create Slides
-
-Use `---` to create new slides automatically.
-
----
-
-# Benefits
-
-## Save Time
-
-Import existing text and start presenting faster.
-
----
-
-## Better Presentations
-
-Focus on your message, not formatting.
-
----
-
-## Easy Sharing
-
-Share with a link that works on any device.
-
----
-
-# Conclusion
-
-## Start Creating Today
-
-Your story deserves to be told beautifully.
-
----
-
-## Thank You!
-
-Questions?
+The ask is small enough to say yes to in the room.
