@@ -32,7 +32,7 @@ iA Presenter uses headings to structure your presentation:
 
 `---` → New slide
 
-`### Heading` → Slide title
+`## Slide Title` → Slide title
 
 ---
 
@@ -40,11 +40,11 @@ iA Presenter uses headings to structure your presentation:
 
 This is speaker notes. Only you see this.
 
-This text appears on the slide. Audience sees this.
+	This text appears on the slide. Audience sees this.
 
 This is also speaker notes.
 
-And this is slide text too.
+	And this is slide text too.
 
 ---
 
@@ -105,19 +105,19 @@ Content stacks vertically on the slide:
 
 ## Side-by-Side Layout
 
-Left panel content visible to audience
+	Left panel content visible to audience
 
-Right panel content visible to audience
+	Right panel content visible to audience
 
 ---
 
 ## Three-Column Layout
 
-Column one content
+	Column one content
 
-Column two content
+	Column two content
 
-Column three content
+	Column three content
 
 ---
 
@@ -232,7 +232,7 @@ This explains why minimal design matters.
 
 ## Image with Explanation
 
-![Visual representation](/assets/diagram.jpg)
+	![Visual representation](/assets/diagram.jpg)
 
 The diagram illustrates our core concept.
 

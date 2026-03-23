@@ -1,6 +1,8 @@
 # iA Presenter Complete Syntax Reference
 
 > **This is the master reference for creating presentations in iA Presenter using Markdown.**
+>
+> **This reference follows the conventions used by the `examples/` directory in this repository.**
 
 ---
 
@@ -14,7 +16,7 @@ Use heading levels to control slide hierarchy:
 # Title          → Creates cover page (always visible)
 ## Subtitle      → Subtitle on cover (always visible)
 ---             → New slide separator
-### Heading       → Content slide title (always visible)
+## Slide Title   → Default content slide title in this corpus
 ```
 
 ### Cover Slide
@@ -123,14 +125,14 @@ Content stacks vertically:
 
 ### Side-by-Side Layout
 
-Create side-by-side layout by separating tabbed content with a non-tabbed line:
+Create side-by-side layout by separating audience-visible content blocks with a blank line that has no TAB:
 
 ```markdown
 ## Comparison
 
-Left panel content visible to audience
+	Left panel content visible to audience
 
-Right panel content visible to audience
+	Right panel content visible to audience
 ```
 
 **Critical:** The blank line between the two panels must NOT have a TAB. This creates the side-by-side layout.
@@ -173,6 +175,8 @@ Available image attributes:
 - `opacity: 0.5` - Set transparency (0.1 to 1.0)
 - `filter: grayscale` - Apply filter
 - `position: center` - Position image
+
+In this repository, image paths under `/assets/` are illustrative syntax examples. The referenced files are not bundled unless explicitly added later.
 
 ### Multiple Images
 
@@ -292,9 +296,9 @@ Speaker notes about introduction...
 ```markdown
 ## Comparison
 
-Feature A description
+	Feature A description
 
-Feature B description
+	Feature B description
 ```
 
 ### Quote Slide
@@ -347,7 +351,7 @@ This image illustrates our core concept.
 | Cover title | `# Title` | Always |
 | Subtitle | `## Subtitle` | Always |
 | Slide break | `---` | N/A |
-| Slide heading | `### Heading` | Always |
+| Content slide title | `## Slide Title` | Always |
 | Slide content | `⇥Text` | Audience |
 | Speaker notes | `Text` (no tab) | Presenter only |
 | Bold | `**text**` | As positioned |
@@ -369,7 +373,7 @@ This image illustrates our core concept.
 
 ### Problem: Headings not visible
 
-**Solution:** Headings with `#`, `##`, or `###` are always visible. You cannot hide them.
+**Solution:** In this corpus, cover titles use `#` and `##`, and content slide titles use `##` after `---`.
 
 ### Problem: Speech notes visible to audience
 

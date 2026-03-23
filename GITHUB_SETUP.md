@@ -1,192 +1,142 @@
-# GitHub Deployment Guide
+# GitHub Repository Operations
 
-> **Follow these steps to publish your iA Presenter RAG repository to GitHub**
-
----
-
-## Step 1: Create GitHub Repository
-
-1. Go to https://github.com/new
-2. Repository name: `ia-presenter-rag`
-3. Set to **Public**
-4. **DO NOT** initialize with README, license, or .gitignore
-5. Click "Create repository"
+> Use this document to maintain the published repository at https://github.com/pdurlej/ia-presenter-know-how.
 
 ---
 
-## Step 2: Link Local Repository to GitHub
+## Canonical Repository
+
+- repository: `pdurlej/ia-presenter-know-how`
+- primary remote: `https://github.com/pdurlej/ia-presenter-know-how.git`
+- current intent: LLM-first corpus for iA Presenter, still readable as human documentation
+
+Verify the local remote before publishing changes:
 
 ```bash
-# Navigate to your repository
-cd ia-presenter-rag
-
-# Add GitHub remote (replace YOUR_USERNAME with your GitHub username)
-git remote add origin https://github.com/YOUR_USERNAME/ia-presenter-rag.git
-
-# Verify remote was added
 git remote -v
 ```
 
-**Expected output:**
-```
-origin  https://github.com/YOUR_USERNAME/ia-presenter-rag.git (fetch)
+Expected origin:
+
+```text
+origin  https://github.com/pdurlej/ia-presenter-know-how.git (fetch)
+origin  https://github.com/pdurlej/ia-presenter-know-how.git (push)
 ```
 
----
-
-## Step 3: Push to GitHub
+If needed, reset the remote URL:
 
 ```bash
-# Push main branch
-git push -u origin master
+git remote set-url origin https://github.com/pdurlej/ia-presenter-know-how.git
 ```
 
 ---
 
-## Step 4: Verify on GitHub
+## Recommended GitHub Metadata
 
-1. Go to https://github.com/YOUR_USERNAME/ia-presenter-rag
-2. You should see:
-   - All files and directories
-   - README.md displayed as main page
-   - 29 markdown files in docs/, examples/, and syntax/
-   - LICENSE file
+Suggested repository description:
 
----
+```text
+LLM-first corpus for generating iA Presenter presentations with Markdown. Includes syntax reference, examples, tutorials, and video-derived notes.
+```
 
-## Step 5: Enable Repository Features (Optional but Recommended)
-
-### GitHub Topics
-
-Add these topics to make it discoverable:
+Suggested topics:
 
 - `presentation`
 - `markdown`
-- `rag` (retrieval-augmented-generation)
 - `llm`
 - `ai-assistant`
-- `presentation-software`
+- `prompt-engineering`
+- `retrieval`
 - `documentation`
-- `education`
+- `ia-presenter`
 
-### Repository Description
+Suggested homepage:
 
+```text
+https://github.com/pdurlej/ia-presenter-know-how#readme
 ```
-RAG knowledge base for generating beautiful iA Presenter presentations using Markdown. Complete syntax reference, tutorials, and examples for LLM integration.
-```
-
-### Repository Homepage
-
-Set to: `https://github.com/YOUR_USERNAME/ia-presenter-rag#readme`
 
 ---
 
-## Step 6: Create GitHub Release (Optional)
+## Publishing Pass
 
-1. Go to "Releases" → "Create a new release"
-2. Tag version: `v1.0.0`
-3. Release title: `Initial Release - Complete iA Presenter RAG Knowledge Base`
-4. Description:
+Before pushing a documentation update:
 
-```markdown
-## What's Included
-
-- ✅ 6 Official course tutorials
-- ✅ 12 Presentation tips articles
-- ✅ 5 YouTube video transcripts
-- ✅ Complete Markdown syntax reference
-- ✅ 3 Working example presentations
-- ✅ LLM integration guide
-
-## Features
-
-- **LLM-Agnostic**: Works with any LLM (GPT-4, Claude, Llama, etc.)
-- **Human-Readable**: Clean, organized structure for manual reference
-- **Production-Ready**: CC0 Public Domain license
-- **Comprehensive**: 29 documentation files covering all aspects
-
-## Usage
-
-See README.md for integration examples and best practices.
-
-## Attribution
-
-Based on official iA Presenter documentation by Information Architects Inc.
+```bash
+git status --short --branch
 ```
 
-5. Publish release
+Also run a stale-string sweep for:
+- the previous repository name
+- removed community-path references
+- placeholder usernames or contact markers
+
+Review the README render on GitHub after pushing:
+- repo positioning matches the current LLM-first intent
+- `docs/03-videos/` is described as transcripts and notes, not five full transcripts
+- `assets/` is described as path convention only, not a shipped media pack
+- internal file paths mentioned in the README actually exist
+
+Push normally once the branch is clean enough:
+
+```bash
+git push origin master
+```
+
+---
+
+## Release Notes Template
+
+When cutting a release or posting a public update, use wording that matches the repo's actual state:
+
+```markdown
+## Included
+
+- 6 tutorial-style course documents
+- 12 presentation and storytelling articles
+- 1 syntax reference
+- 3 worked examples
+- 5 video-derived notes with mixed completeness
+
+## Positioning
+
+This repository is an LLM-first corpus for iA Presenter Markdown generation and validation.
+
+## Caveats
+
+- Example asset paths are illustrative and not bundled as media files.
+- Video coverage includes transcripts where available and notes where transcripts are missing or duplicated.
+```
 
 ---
 
 ## Troubleshooting
 
-### Problem: "fatal: refusing to merge unrelated histories"
+### Wrong remote URL
 
-**Solution:**
 ```bash
-# Force push (only if you're sure local is correct)
-git push -u origin master --force
+git remote set-url origin https://github.com/pdurlej/ia-presenter-know-how.git
+```
 
-# Or, pull first then push
-git pull origin master --allow-unrelated-histories
+### Authentication failed
+
+Use the GitHub CLI instead of embedding credentials in the remote URL:
+
+```bash
+gh auth login
 git push origin master
 ```
 
-### Problem: Authentication failed
+### README still shows stale wording
 
-**Solution:**
-```bash
-# Create a GitHub Personal Access Token
-# Settings → Developer settings → Personal access tokens → Generate new token
-# Then use token in push:
-git push https://YOUR_TOKEN@github.com/YOUR_USERNAME/ia-presenter-rag.git master
-```
-
-### Problem: Wrong remote URL
-
-**Solution:**
-```bash
-# Remove incorrect remote
-git remote remove origin
-
-# Add correct remote
-git remote add origin https://github.com/YOUR_USERNAME/ia-presenter-rag.git
-
-# Push
-git push -u origin master
-```
+Run the stale-string sweep described above before pushing.
 
 ---
 
-## After Publishing
+## Deferred Work
 
-1. **Share the link**: `https://github.com/YOUR_USERNAME/ia-presenter-rag`
-2. **Write a blog post** about creating the repository
-3. **Tweet**: "Just published a complete RAG knowledge base for iA Presenter! 🎯 #iAPresenter #RAG #LLM"
-4. **Submit to**: GitHub Trending (if it gets stars quickly!)
-
----
-
-## Verification Checklist
-
-- [ ] Repository is public
-- [ ] All 29 markdown files are visible
-- [ ] README.md displays correctly
-- [ ] LICENSE shows CC0 Public Domain
-- [ ] File structure matches documentation
-- [ ] Examples are valid Markdown
-- [ ] No broken links in README
-
----
-
-## Success!
-
-Your repository is now live and ready for the LLM community! 🚀
-
----
-
-**Next Steps:**
-- Monitor GitHub Issues and Pull Requests
-- Update as iA Presenter releases new features
-- Collect feedback from users
-- Consider Phase 2 features (patterns, advanced guides)
+These are not part of the current cleanup baseline:
+- a live community contribution workflow
+- a bundled asset pack
+- fuller transcript coverage for all video notes
+- a separate legal review of derivative-source packaging

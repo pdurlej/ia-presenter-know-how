@@ -1,45 +1,31 @@
-# This directory is for placeholder images
+# Assets Notes
 
-# Instructions
+This directory documents the path convention used by the examples. It does not currently bundle an asset pack.
 
-When adding images to iA Presenter presentations:
-
-1. Place your images in this `/assets/` directory
-2. Reference them using relative paths in your Markdown:
-
-```markdown
-![Alt text](/assets/your-image.jpg)
-	size: contain
-```
-
-3. Supported image formats:
-   - .jpg
-   - .jpeg
-   - .png
-   - .webp
-   - .gif
-
-4. Recommended attributes:
-   - `size: contain` - Fit entire image within slide
-   - `size: cover` - Cover entire slide
-   - `opacity: 0.5` to 1.0` - Set transparency
-   - `filter: grayscale` - Apply filter
-   - `position: center` - Position image
-
-# Note
-
-Images are optional for presentations. iA Presenter also supports:
-- Unsplash integration (built-in)
-- YouTube video embedding
-- Local image drag-and-drop
-
-# Example
+Use image references like this:
 
 ```markdown
 ## Slide with Image
 
-	![Beautiful landscape](/assets/landscape.jpg)
-		size: contain
-
-This image demonstrates the `size: contain` attribute.
+	![Alt text](/assets/your-image.jpg)
+	size: contain
 ```
+
+Supported formats in iA Presenter typically include:
+- `.jpg`
+- `.jpeg`
+- `.png`
+- `.webp`
+- `.gif`
+
+Common image attributes:
+- `size: contain`
+- `size: cover`
+- `opacity: 0.5`
+- `filter: grayscale`
+- `position: center`
+
+Important note:
+- paths under `/assets/` in this repository are illustrative syntax examples
+- referenced files like `/assets/landscape.jpg` are not shipped here unless explicitly added later
+- iA Presenter also supports local drag-and-drop, Unsplash integration, and embedded video links

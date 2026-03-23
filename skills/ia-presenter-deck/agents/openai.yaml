@@ -1,0 +1,4 @@
+interface:
+  display_name: "iA Presenter Deck"
+  short_description: "Create stronger iA Presenter decks"
+  default_prompt: "Use $ia-presenter-deck to create or improve an iA Presenter `.iapresenter` deck with lean slides, strong speaker notes, and a clear closing action."

@@ -1,4 +1,4 @@
-# Design Your Slides - Video Transcript
+# Design Your Slides - Video Notes
 
 > Video: iA Presenter 101 - Designing your slides
 > Duration: ~3 minutes
@@ -6,9 +6,9 @@
 
 ---
 
-## Transcript
+## Status
 
-[Transcript not available - YouTube API limit reached for this video]
+Transcript unavailable in this repo snapshot. This file records topic coverage only.
 
 ---
 
@@ -32,5 +32,5 @@ For complete information on designing slides, see:
 
 ---
 
-**Source:** YouTube video (transcript unavailable)
-**Tags:** `video`, `transcript`, `design-slides`, `layout`, `themes`
+**Source:** YouTube video note; transcript unavailable at capture time
+**Tags:** `video`, `notes`, `design-slides`, `layout`, `themes`

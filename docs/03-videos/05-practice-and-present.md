@@ -1,4 +1,4 @@
-# Practice and Present - Video Transcript
+# Practice and Present - Video Notes
 
 > Video: iA Presenter 101 - Practice and present
 > Duration: ~3 minutes
@@ -6,16 +6,16 @@
 
 ---
 
-## Transcript
+## Status
 
-[Transcript not available - YouTube API limit reached for this video]
+Transcript unavailable in this repo snapshot. This file records topic coverage only.
 
 ---
 
 ## Key Topics Covered
 
 Based on the course tutorial, this video covers:
-- Entering Presentation Mode with Play button ▶️
+- Entering Presentation Mode with the Play button
 - Using the teleprompter for speaker notes
 - Navigating slides during presentation
 - Online presentations with Zoom/Google Meet
@@ -32,5 +32,5 @@ For complete information on presenting, see:
 
 ---
 
-**Source:** YouTube video (transcript unavailable)
-**Tags:** `video`, `transcript`, `practice`, `present`, `delivery`
+**Source:** YouTube video note; transcript unavailable at capture time
+**Tags:** `video`, `notes`, `practice`, `present`, `delivery`
