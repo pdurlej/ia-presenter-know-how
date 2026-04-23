@@ -9,9 +9,11 @@ Ask only for information that materially changes the deck.
 3. What should happen after the presentation?
 4. How long is the talk, or how many slides should it roughly be?
 5. What tone should it have?
-6. Is there real evidence or data that must appear?
-7. Are images or visuals available, or should the deck stay mostly text-first?
-8. Are there hard constraints or taboo topics?
+6. What kind of deck should it feel like: pitch, board update, workshop, case study, manifesto, or something else?
+7. Is there real evidence or data that must appear?
+8. Are images, screenshots, or visuals available, or should the deck stay text-only?
+9. Are there hard constraints or taboo topics?
+10. If stock images are needed, are Pexels or Unsplash acceptable sources?
 
 ## Safe Defaults
 
@@ -21,8 +23,10 @@ Ask only for information that materially changes the deck.
 - duration: 10-15 minutes
 - deck size: 8-12 core slides
 - tone: clear, confident, human
+- mode: reframe-led business deck unless the prompt clearly implies another mode
 - evidence: no hard data unless provided
-- visuals: text-first deck with selective layout contrast
+- visuals: text-only deck with selective surface contrast unless assets are available
+- stock image sources: Pexels and Unsplash are acceptable unless the user says otherwise
 - constraints: none unless user gives them
 
 ## Notes

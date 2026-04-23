@@ -1,20 +1,22 @@
 # iA Presenter Templates
 
 These are rhetorical templates, not rigid slide counts.
+Pick one on purpose instead of drifting into the same deck shape every time.
 
-## 1. Pitch Deck
+## 1. Reframe-Led Pitch
 
 1. cover
-2. problem reframed
-3. what people actually feel
-4. contrast or comparison
-5. what changes
-6. proof or pilot
-7. why now
+2. reframe
+3. customer voice
+4. tension or contrast
+5. chapter-card reset
+6. what changes
+7. proof or pilot
 8. decision / next step
 
 Good surface mix:
 - sharp cover
+- one chapter card
 - quote or customer-voice slide
 - one crisp comparison
 - one tiny proof table
@@ -23,19 +25,29 @@ Good surface mix:
 ## 2. Board / Executive Update
 
 1. short version up front
-2. what changed
-3. what we stopped doing
-4. what we doubled down on
-5. where we were wrong
-6. risks we are not hiding
-7. what we need
-8. what success looks like next
+2. situation / complication
+3. our answer
+4. what changed in the business
+5. what we stopped doing
+6. where we were wrong or what still worries us
+7. proof of movement
+8. risks and open questions
+9. what we need
+10. what success looks like next
 
 Good surface mix:
 - short-version slide
+- one `SCQA` or answer-first opening move
+- one short chapter-card or direct confession slide
 - one before / after or stop / start contrast
-- one exact proof table
+- one exact full-width proof table
 - one explicit ask slide
+
+Rules:
+- answer early
+- build the body as a question chain
+- use governing-thought headlines, not topic labels
+- do not park the conclusion behind five context slides
 
 ## 3. Workshop / Teaching Deck
 
@@ -49,6 +61,7 @@ Good surface mix:
 
 Good surface mix:
 - agenda
+- one manifesto-style section reset
 - weak / strong contrast
 - ladder or sequence slide
 - practice or checklist slide

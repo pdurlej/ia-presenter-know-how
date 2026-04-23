@@ -111,10 +111,10 @@ This section demonstrates additional syntax features for reference.
 ---
 ### Image syntax
 
-Images use TAB-prefixed Markdown image syntax with optional attributes.
+Images can use Markdown syntax, but Content Blocks Syntax is better when you need image metadata.
 
-	![Onboarding flow diagram](/assets/onboarding-flow.jpg)
-	size: contain
+/assets/onboarding-flow.jpg
+size: contain
 
 In this repository, image paths under `/assets/` are illustrative syntax examples.
 
@@ -133,9 +133,9 @@ Code blocks work inside TAB-prefixed content.
 
 Separate visible content blocks with a blank line (no TAB) to create columns.
 
-	![Before](/assets/before-wiki.jpg)
+/assets/before-wiki.jpg
 
-	![After](/assets/after-cheatsheet.jpg)
+/assets/after-cheatsheet.jpg
 
 ---
 ## Pick one team.

@@ -13,6 +13,7 @@ The goal is to generate decks that:
 - use visible slide surfaces intentionally
 - survive visual review inside iA Presenter
 - improve over time through the Golden Deck loop
+- run through a local presentation system with render artifacts, structured review, and bounded corrections
 
 ---
 
@@ -74,6 +75,7 @@ Expected output:
 
 Primary reference:
 - `skills/ia-presenter-deck/SKILL.md`
+- `docs/04-project/06-presentation-system-v1.md`
 
 ---
 
@@ -178,4 +180,3 @@ If a deck improves because of a repeated insight, that insight should move into:
 - the candidate-deck workflow
 
 This is how the repo becomes a better LLM package, not just a bigger one.
-

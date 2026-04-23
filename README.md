@@ -27,11 +27,16 @@ This is not an official iA Presenter repository. iA Presenter is a commercial pr
 - `examples/02-complex.md`: full-featured deck demonstrating all major surface patterns
 - `examples/03-anti-patterns.md`: common mistakes with corrected versions showing proper fixes
 - `skills/ia-presenter-deck/`: canonical repo-first skill for generating and improving `.iapresenter` decks
+- `skills/ia-presenter-render/`: macOS-local render skill for exporting HTML and slide images from the installed app
+- `skills/ia-presenter-story-qa/`: structured review of logic, pacing, and note abuse
+- `skills/ia-presenter-qa/`: rendered visual QA over exported slides
 - `golden-candidates/`: first-pass decks for iterative feedback and future Golden Deck development
+- `reference-decks/`: stable public reference decks, including future anonymized derivatives of private source decks
 - `docs/01-course/`: six tutorial-style documents based on official how-to material
 - `docs/02-tips/`: twelve articles on storytelling, delivery, visuals, and Markdown
 - `docs/03-videos/`: five video-derived files with mixed completeness
 - `docs/04-project/`: repo-specific project documentation, package format notes, and Golden Deck workflow
+- `docs/04-project/06-presentation-system-v1.md`: architecture and operating contract for the local presentation pipeline
 
 Video coverage in `docs/03-videos/` is intentionally uneven:
 - `01-quick-tour.md`: transcript-based note with key points
@@ -49,6 +54,7 @@ Video coverage in `docs/03-videos/` is intentionally uneven:
 - This cleanup does not introduce a community contribution workflow. Any future community layer should be added explicitly, not implied by README copy.
 - The repository copy of `skills/ia-presenter-deck/` is canonical; a copy under `~/.codex/skills/` is only a deployment location.
 - In this repo, a real `.iapresenter` deck is a package directory containing at least `text.md` and `info.json`, not a single plain-text file renamed to `.iapresenter`.
+- Local render runs live under `.presentation-system/`, which is intentionally gitignored because it can contain rendered outputs and private local review artifacts.
 
 ---
 
@@ -153,6 +159,7 @@ Design intent:
 - stronger iA Presenter fit than generic PowerPoint or Marp skills
 - text-first drafting with visible slide surfaces carrying real meaning and notes deepening the argument
 - integrated use of this repo's syntax reference, anti-patterns, and Golden Deck candidate loop
+- export-first presentation system support: author -> render -> story QA -> visual QA -> bounded fix
 
 Install note:
 - the copy in this repository is the source of truth
@@ -185,7 +192,9 @@ ia-presenter-know-how/
 │       ├── 01-repository-overview.md
 │       ├── 02-iapresenter-package-and-skill.md
 │       ├── 03-llm-generation-workflow.md
-│       └── 04-golden-deck-program.md
+│       ├── 04-golden-deck-program.md
+│       ├── 05-anonymized-deck-ingestion.md
+│       └── 06-presentation-system-v1.md
 ├── examples/
 │   ├── 01-basic.md
 │   ├── 02-complex.md
@@ -194,15 +203,35 @@ ia-presenter-know-how/
 │   ├── README.md
 │   ├── 01-ai-support-copilot-pitch.iapresenter
 │   ├── 02-q2-board-update.iapresenter
-│   ├── 03-customer-interview-workshop.iapresenter
-│   ├── 04-support-team-case-study.iapresenter
-│   └── 05-jeden-workflow-pilot-ai.iapresenter
+│   └── 03-customer-interview-workshop.iapresenter
+├── reference-decks/
+│   └── README.md
 ├── skills/
 │   ├── README.md
-│   └── ia-presenter-deck/
+│   ├── ia-presenter-deck/
+│   │   ├── SKILL.md
+│   │   ├── agents/openai.yaml
+│   │   └── references/
+│   ├── ia-presenter-render/
+│   │   ├── SKILL.md
+│   │   ├── agents/openai.yaml
+│   │   ├── references/
+│   │   └── scripts/
+│   ├── ia-presenter-story-qa/
+│   │   ├── SKILL.md
+│   │   ├── agents/openai.yaml
+│   │   ├── references/
+│   │   └── scripts/
+│   └── ia-presenter-qa/
 │       ├── SKILL.md
-│       ├── agents/openai.yaml
-│       └── references/
+│       ├── references/
+│       └── scripts/
+├── _bmad-output/
+├── AGENTS.md
+├── bmadx-trigger-matrix.md
+├── bmadx-verify-matrix.md
+├── bmadx-rollout-checklist.md
+├── bmadx-subagent-policy.md
 └── syntax/
     └── 00-complete-reference.md
 ```
@@ -225,7 +254,8 @@ For human readers:
 3. follow `docs/01-course/` in order
 4. use `examples/03-anti-patterns.md` as a final review pass
 5. review `golden-candidates/` when iterating toward a Golden Deck pattern
-6. use `docs/04-project/` when you need to understand how this repo is meant to be operated
+6. review `reference-decks/` when public anonymized references start accumulating
+7. use `docs/04-project/` when you need to understand how this repo is meant to be operated
 
 ---
 
@@ -237,6 +267,7 @@ For human readers:
 - `docs/03-videos/` is documented as transcripts and notes, not five full transcripts
 - `assets/` is documented as path convention only, not a bundled media pack
 - Golden Deck work now has a dedicated candidate loop in `golden-candidates/`
+- the repo is prepared for future anonymized ingestion of strong private decks into `reference-decks/`
 
 Possible future work:
 - fuller video transcript coverage

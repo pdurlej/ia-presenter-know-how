@@ -12,6 +12,7 @@ It combines three layers:
 - corpus: syntax, examples, tips, and source-derived notes
 - skill: a canonical generation workflow under `skills/ia-presenter-deck/`
 - iteration loop: candidate decks under `golden-candidates/` that can evolve into reusable Golden Deck patterns
+- curated references: anonymized public decks under `reference-decks/` when private source material is safely generalized
 
 The project is optimized first for:
 - prompt assembly
@@ -62,14 +63,30 @@ Notes derived from videos. Coverage is intentionally uneven. Some files are tran
 
 Contains repo-first skills. Right now the important one is:
 - `skills/ia-presenter-deck/`
+- `skills/ia-presenter-render/`
+- `skills/ia-presenter-story-qa/`
+- `skills/ia-presenter-qa/`
 
-This is the canonical drafting workflow for creating or improving `.iapresenter` decks using this corpus.
+Together these skills form the local presentation system:
+- author
+- render
+- story review
+- visual review
 
 ### `golden-candidates/`
 
 Contains working candidate decks.
 
 These are not polished final presentations. They are the place where style, pacing, visible slide surfaces, and reusable narrative moves are tested before promoting anything to Golden Deck status.
+
+### `reference-decks/`
+
+Contains stronger public reference decks that are safe to keep in the repository.
+
+These may be:
+- anonymized from private source decks
+- rewritten from real presentation patterns
+- promoted from earlier candidate work once they become stable and reusable
 
 ---
 
@@ -158,4 +175,3 @@ This repository is working as intended when:
 - the resulting deck uses multiple visible surface patterns intentionally
 - candidate decks become easier to critique and refine
 - one or more candidate decks eventually become stable Golden Deck references
-

@@ -10,6 +10,7 @@ This repository is a structured Markdown corpus for generating iA Presenter pres
 - `examples/03-anti-patterns.md` — common mistakes with corrected versions
 - `skills/ia-presenter-deck/SKILL.md` — canonical generation skill (read its `references/` directory for workflow, rubric, templates, layout heuristics, and surface patterns)
 - `golden-candidates/` — real `.iapresenter` package directories for iterative review
+- `reference-decks/` — stable public reference decks, including future anonymized derivatives of private source material
 
 ## Core conventions
 
@@ -38,6 +39,14 @@ example.iapresenter/
 3. Follow the workflow in `skills/ia-presenter-deck/references/WORKFLOW.md`
 4. Score the result against `skills/ia-presenter-deck/references/RUBRIC.md`
 5. Check against `examples/03-anti-patterns.md` before delivering
+
+## When a user shares a strong private deck
+
+1. Treat the source deck as private by default
+2. Do not commit the raw source deck into the public repo
+3. Anonymize or rewrite it before publication
+4. Publish safe derivatives under `reference-decks/`
+5. Use `docs/04-project/05-anonymized-deck-ingestion.md` as the operating checklist
 
 ## What not to do
 

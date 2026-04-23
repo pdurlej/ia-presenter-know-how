@@ -36,6 +36,8 @@ These decks exist to expose weaknesses early, not to prove that the style is alr
 
 Do not review only in Markdown.
 
+In the presentation system, prefer the local render loop and review the exported artifacts under `.presentation-system/` before asking a human for screenshots.
+
 Check:
 - slide thumbnails
 - density
@@ -81,6 +83,8 @@ A candidate deck is ready to become a Golden Deck reference when:
 - the close works reliably
 - its patterns are reusable beyond the original topic
 - the skill can generate something similar on purpose
+
+If the deck originates from private source material, it should move into `reference-decks/` only after anonymization and a publication-safety review.
 
 ---
 

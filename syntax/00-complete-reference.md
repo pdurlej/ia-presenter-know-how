@@ -158,23 +158,29 @@ Create side-by-side layout by separating audience-visible content blocks with a 
 ```markdown
 ## Image Slide
 
-	![Alt text](/assets/image.jpg)
-	size: contain
+	![](image-name.png)
 ```
 
 ### Image Attributes
 
 ```markdown
-	![Alt text](/assets/image.jpg)
-	size: contain
+/assets/image.jpg
+size: contain
+x: right
+background: true
 ```
 
-Available image attributes:
+Image metadata such as `size`, `x`, `y`, `background`, `filter`, and `opacity`
+works with Content Blocks Syntax, not Markdown image syntax.
+
+Available image attributes for Content Blocks Syntax:
 - `size: contain` - Fit entire image within slide
-- `size: cover` - Cover entire slide
-- `opacity: 0.5` - Set transparency (0.1 to 1.0)
-- `filter: grayscale` - Apply filter
-- `position: center` - Position image
+- `size: cover` - Cover available image container
+- `x: left|center|right` - Horizontal alignment
+- `y: top|center|bottom` - Vertical alignment
+- `background: true` - Render image behind visible text
+- `filter: darken|lighten|grayscale|sepia|blur` - Apply filter
+- `opacity: 50%` - Set transparency
 
 In this repository, image paths under `/assets/` are illustrative syntax examples. The referenced files are not bundled unless explicitly added later.
 
@@ -183,9 +189,9 @@ In this repository, image paths under `/assets/` are illustrative syntax example
 ```markdown
 ## Multiple Images
 
-	![Image 1](/assets/image1.jpg)
+/assets/image1.jpg
 
-	![Image 2](/assets/image2.jpg)
+/assets/image2.jpg
 ```
 
 ### YouTube Videos

@@ -1,6 +1,6 @@
 # Golden Candidate Decks
 
-> First-pass candidate decks for iterative feedback.
+> Three deliberately different candidate decks for iterative feedback.
 
 These files are meant to be imported into iA Presenter, reviewed in presentation mode, and refined until one structure becomes the first real Golden Deck.
 
@@ -10,11 +10,9 @@ Each candidate is a real `.iapresenter` package directory:
 
 ## Included Candidates
 
-- `01-ai-support-copilot-pitch.iapresenter`: product pitch for a buyer or exec audience
-- `02-q2-board-update.iapresenter`: candid board-style business update
-- `03-customer-interview-workshop.iapresenter`: workshop/training deck
-- `04-support-team-case-study.iapresenter`: story-driven case study / keynote-style deck
-- `05-jeden-workflow-pilot-ai.iapresenter`: small Polish smoke-test deck for validating package output
+- `01-ai-support-copilot-pitch.iapresenter`: first note from a synthetic Head of Product to the team, framed around SaaS product pressure in 2026
+- `02-q2-board-update.iapresenter`: serious executive review from that same Head of Product to CFO, CTO, and CPO
+- `03-customer-interview-workshop.iapresenter`: customer workshop deck introducing the same synthetic SaaS product while supporting live facilitation
 
 ## What To Review
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "iA Presenter Render"
+  short_description: "Export real render artifacts from iA Presenter"
+  default_prompt: "Use $ia-presenter-render to export this iA Presenter deck to rendered artifacts for review."

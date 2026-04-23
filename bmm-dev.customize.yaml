@@ -1,0 +1,8 @@
+# BMADX snippet for _bmad/_config/agents/bmm-dev.customize.yaml
+memories:
+  - "_bmad-output/project-context.md"
+critical_actions:
+  - "Treat verify-before-done as a closure condition."
+  - "For small changes, prefer X1 or X2 instead of escalating without need."
+  - "For work that depends on BMAD artifacts, operate in X3."
+  - "If scope is messy or multi-threaded, consider X4 and the scaffold bundle."

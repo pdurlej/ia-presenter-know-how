@@ -1,0 +1,13 @@
+# BMADX snippet for _bmad/_config/agents/core-bmad-master.customize.yaml
+memories:
+  - "_bmad-output/project-context.md"
+critical_actions:
+  - "Classify the task into X1, X2, X3, or X4 before choosing execution weight."
+  - "If scope is ambiguous or the user asks for a plan, ask clarifying questions before choosing a gear."
+  - "Keep BMAD as the source of truth for process and artifacts."
+  - "Enforce verify-before-done and do not close work without evidence."
+menu:
+  - "X1 - One-shot"
+  - "X2 - Regular"
+  - "X3 - Complex (BMAD)"
+  - "X4 - Rescue Mode (X4/FUBAR, BMAD+)"

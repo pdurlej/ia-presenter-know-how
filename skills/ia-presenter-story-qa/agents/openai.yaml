@@ -1,0 +1,4 @@
+interface:
+  display_name: "iA Presenter Story QA"
+  short_description: "Review deck logic, pacing, and visible payloads"
+  default_prompt: "Use $ia-presenter-story-qa to review this iA Presenter deck for logic, pacing, note abuse, and closing quality."

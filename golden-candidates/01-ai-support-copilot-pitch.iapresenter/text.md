@@ -1,83 +1,89 @@
-# The Wait Is The Product Problem
-## AI support copilot pitch
+# 2026 Will Not Reward More Features
+## First note from the new Head of Product at Astera Flow
 
 ---
-## Buyers talk about volume
-#### Customers feel the handoff
+### How I work
+#### Narrow the product until the value is obvious.
 
-This deck only works if the room stops thinking about ticket count and starts thinking about delay, repetition, and uncertainty.
-That is why the opening needs a reframe, not a dashboard.
-
----
-### What customers actually hate
-
-Do not sell the product yet. Let the customer voice do the work first.
-
-	> "I had to explain it twice."
-	> "I still did not know what happened."
-	> "I waited for the next human."
+	Start from real user behavior
+	Narrow scope before scaling
+	Measure repeated use over launch theatre
 
 ---
-## More tickets
-#### VS
-## Less confidence
+# SaaS got harder.
+#### The product job got narrower.
 
-Support teams can survive volume for a while. What breaks trust is the gap between what the customer needs and what the next human knows.
-That is the gap the copilot is supposed to shorten.
-
-	Delay
-	Repetition
-	Uncertainty
+https://images.pexels.com/photos/5453821/pexels-photo-5453821.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200
+background: true
+filter: darken
+opacity: 45%
 
 ---
-### What the copilot changes
-#### Inside the same queue, not outside it
+### The five pressures on SaaS in 2026
+#### The market now punishes fuzzy value faster.
 
-The value is operational, not magical. The product reduces search, rewrite work, and missing context inside the flow the team already uses.
-
-	1. Searches past tickets
-	2. Drafts the first reply
-	3. Flags missing context
-
----
-### Why this lands fast
-
-Adoption risk matters more than feature count here.
-The audience needs to hear that the first rollout is boring in a good way.
-
-	No new queue
-	No workflow redesign
-	No rip-and-replace
+	Copy gets cheaper
+	Proof gets earlier
+	Pricing gets tighter
+	Integration debt compounds
+	Trust decides expansion
 
 ---
-### Success in 30 days
+## AI parity
+#### is now common
+## Workflow trust
+#### is still expensive
 
-You are not proving full ROI yet. You are proving enough movement to deserve expansion.
+	Accuracy in context
+	Clear ownership
+	Auditability
 
-	| Metric | Before | Pilot target |
+---
+https://images.pexels.com/photos/7688123/pexels-photo-7688123.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200
+size: cover
+x: left
+
+### Time-to-value is now the product
+#### One defendable week beats fifty interesting features.
+	Faster first setup
+	One repeatable workflow
+	Proof the outcome holds
+
+---
+# What this means for Astera Flow
+#### Fewer promises. Stronger product loops.
+
+https://images.pexels.com/photos/17724744/pexels-photo-17724744.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200
+background: true
+filter: darken
+opacity: 40%
+
+---
+### What we will prioritize
+#### Fund the moves that compound.
+
+	Shorter paths to first value
+	Better in-product guidance
+	Clear proof of automation quality
+	Usage signals tied to expansion
+
+---
+### What we will stop rewarding
+#### Busy work that weakens the loop.
+
+	Vague roadmap expansion
+	Custom work without repeat demand
+	Shipping before adoption is instrumented
+
+---
+## What I will watch every month
+#### If these three get easier to explain, the product gets easier to grow.
+	| Signal | What it tells me | What I need to see |
 	|---|---|---|
-	| First response time | 11h | < 3h |
-	| Escalations | 27% | < 15% |
-	| QA rework | 18% | < 8% |
+	| Time to first value | Setup is getting cheaper | New teams reach value inside week one |
+	| Weekly returning teams | The workflow earns habit | Repeat use grows without manual rescue |
+	| Expansion from active accounts | Trust becomes revenue | Active accounts widen usage over time |
 
 ---
-### Pilot plan
-#### One queue. Four weeks. Clear signal.
-
-If this slide feels complicated, the deal feels complicated too.
-
-	1. Connect knowledge and ticket history
-	2. Shadow the top ticket types
-	3. Ship agent assist to one queue
-	4. Review trust before scale
-
----
-### The real buying question
-#### Can your team trust the first draft?
-
-This is the question hiding behind product, security, and process objections.
-Say it directly and the close gets stronger.
-
----
-# Start with one queue.
-#### Measure trust before scale.
+# Ship less surface area.
+#### Earn more repeated use.

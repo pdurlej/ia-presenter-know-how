@@ -1,78 +1,87 @@
-# Better Interviews Start Before The Question
-## Customer interview workshop
+# Astera Flow In Practice
+## Workshop deck for the first real workflow
+
+https://images.pexels.com/photos/17724744/pexels-photo-17724744.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200
+background: true
+filter: darken
+opacity: 42%
 
 ---
-### What this session gives you
+### What you should leave with today
+#### One shared picture. One workflow. One useful next step.
 
-Open with a practical promise, not theory.
-
-	1. A stronger opener
-	2. A better question ladder
-	3. A cleaner note-to-insight flow
-
----
-# Stop asking for opinions.
-#### Start asking for last real behavior.
-
-Most weak interviews fail before the first useful answer.
-They ask for theories, wishes, or polished stories instead of what actually happened.
+	What Astera Flow is for
+	Which workflow to model first
+	What good setup looks like
 
 ---
-## Weak question
+https://images.pexels.com/photos/7688123/pexels-photo-7688123.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200
+size: cover
+x: right
+
+### What the product actually does
+#### One operating loop from signal to approved action.
+	Signal enters one queue
+	Decision stays reviewable
+	Action becomes reusable
+
+---
+## Spreadsheet chase
 #### VS
-## Strong question
+## Shared operating loop
 
-Contrast teaches faster than rules.
-
-	"What features do you want?"
-
-	"Walk me through the last time this broke."
+	Requests arrive in too many places
+	Context lives in too many tools
+	Approval happens too late
 
 ---
-### Listen for verbs
+### The model
+#### If this sequence feels vague, the product will feel vague.
 
-Verbs show where the work, workaround, or friction actually lives.
-
-	Changed
-	Stopped
-	Chased
-	Worked around
-
----
-### From quote to insight
-
-Interviewers often stop at the quote. Product work starts one step later.
-
-	1. Quote
-	2. Pattern
-	3. Decision
+	1. Signal enters the workflow
+	2. Playbook proposes the next move
+	3. Owner reviews or approves
+	4. Action is logged and reusable
 
 ---
-### Use this ladder tomorrow
-
-The audience should be able to steal this sequence immediately.
-
-	1. Tell me about the last real instance.
-	2. What did you do first?
-	3. Where did it slow down?
-	4. What did you do next?
+# Start narrow.
+#### One team, one trigger, one outcome.
 
 ---
-### Common traps
+### Exercise 1
+#### Pick one real workflow and answer these four prompts.
 
-Name the failure modes before practice so people can hear themselves doing them.
-
-	Leading the witness
-	Asking for opinions too early
-	Solving before understanding
-
----
-### Leave with one line worth changing something for
-
-A good interview does not end with "interesting." It ends with a sentence that can move a roadmap, a message, or a process.
-
-	> "We always copy the same answer from Slack."
+	What triggers it?
+	Who owns the decision?
+	What action repeats most often?
+	What must be visible for trust?
 
 ---
-# Interview one customer this week.
-#### Bring back one quote worth acting on.
+### Weak setup
+
+	> "We want to automate customer operations."
+
+#### Better setup
+
+	> "We want to shorten approval time for renewal-risk accounts."
+
+---
+### What good looks like in 30 days
+#### The first version should already survive scrutiny.
+
+	One workflow is live
+	One owner can explain the rules
+	One team uses it without prompting
+	One result is strong enough to defend internally
+
+---
+### Exercise 2
+#### Name what could break trust before rollout.
+
+	Bad source data
+	Missing approval rules
+	No clear escalation path
+
+---
+# Bring one real workflow.
+#### We will shape the first version together.

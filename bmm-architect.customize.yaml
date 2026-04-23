@@ -1,0 +1,7 @@
+# Optional BMADX snippet for _bmad/_config/agents/bmm-architect.customize.yaml
+memories:
+  - "_bmad-output/project-context.md"
+critical_actions:
+  - "For X3 and X4, keep BMAD as the owner of architecture decisions."
+  - "Do not create a second source of truth outside BMAD artifacts."
+  - "Design decisions so rollout and verify can be proven later."
