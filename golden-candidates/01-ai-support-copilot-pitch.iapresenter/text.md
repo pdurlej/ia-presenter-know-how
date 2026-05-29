@@ -54,11 +54,11 @@ The audience needs to hear that the first rollout is boring in a good way.
 
 You are not proving full ROI yet. You are proving enough movement to deserve expansion.
 
-	| Metric | Before | Pilot target |
-	|---|---|---|
-	| First response time | 11h | < 3h |
-	| Escalations | 27% | < 15% |
-	| QA rework | 18% | < 8% |
+| Metric | Before | Pilot target |
+|---|---|---|
+| First response time | 11h | < 3h |
+| Escalations | 27% | < 15% |
+| QA rework | 18% | < 8% |
 
 ---
 ### Pilot plan

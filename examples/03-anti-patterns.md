@@ -187,6 +187,30 @@ Use proper hierarchy.
 
 ---
 
+# ❌ WRONG: TAB-Indenting a Table
+
+## The Mistake
+
+A TAB in front of a table turns it into an indented code block. It renders as raw monospace text, not a grid:
+
+	| Metric | Before | After |
+	|--------|--------|--------|
+	| Speed | slow | fast |
+
+The audience sees the literal pipes and dashes. The same trap applies to fenced code blocks.
+
+---
+
+## The Fix
+
+Write tables (and code blocks) flush-left, with no TAB. They appear on the slide automatically, like headings and images.
+
+| Metric | Before | After |
+|--------|--------|--------|
+| Speed | slow | fast |
+
+---
+
 # ✅ CORRECT: Good Example
 
 ## What Works
@@ -218,6 +242,7 @@ Check for these anti-patterns:
 	[ ] Logical side-by-side comparisons
 	[ ] Proper heading hierarchy
 	[ ] One idea per slide
+	[ ] Tables and code blocks flush-left (never TAB-indented)
 
 ---
 

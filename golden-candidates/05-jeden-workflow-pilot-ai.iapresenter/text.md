@@ -44,11 +44,11 @@ Szybkość jest użyteczna, ale nie wystarczy. Najpierw chcesz zobaczyć, że lu
 
 Mała tabela wystarczy. Chodzi o to, żeby po dwóch tygodniach zadać trzy pytania, a nie policzyć cały świat.
 
-	| Miara | Pytanie |
-	|---|---|
-	| Powrót | Czy ludzie użyli wyniku ponownie? |
-	| Rework | Czy poprawek było mniej? |
-	| Decyzja | Czy decyzja przyszła szybciej? |
+| Miara | Pytanie |
+|---|---|
+| Powrót | Czy ludzie użyli wyniku ponownie? |
+| Rework | Czy poprawek było mniej? |
+| Decyzja | Czy decyzja przyszła szybciej? |
 
 ---
 ### Po 30 dniach chcesz jednej odpowiedzi

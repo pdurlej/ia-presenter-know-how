@@ -75,8 +75,8 @@ Core rules:
 - Mid-deck, a standalone `#` heading is a large section/landing heading — use it sparingly for resets, turns, and closers.
 - All headings (`#` through `####`) are automatically visible to the audience; they do not need a TAB.
 - Text without a TAB is speaker notes.
-- Text with a TAB is audience-visible slide *body* content.
-- Quotes, tables, images, and layout structure also shape what the audience sees.
+- Text with a TAB is audience-visible slide *body* content (paragraphs, lists, quotes).
+- Tables, fenced code blocks, headings, and images appear on the slide automatically — keep them flush-left, never TAB-indented (a TAB makes a table or code fence render as raw code).
 - Side-by-side layouts depend on cell breaks; see the syntax reference and worked examples for the exact patterns used here.
 
 ---
