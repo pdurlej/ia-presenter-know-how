@@ -177,41 +177,48 @@ Create side-by-side layout by separating audience-visible content blocks with a 
 
 ### Basic Image Syntax
 
+Reference an image **flush-left** (images are auto-visible — no TAB) with a
+**root-relative path that starts with `/`**, and bundle the file in the package:
+
 ```markdown
 ## Image Slide
 
-	![Alt text](/assets/image.jpg)
-	size: contain
+![Alt text](/assets/image.jpg)
 ```
+
+> **Two rules, both verified live — get either wrong and nothing shows:**
+> 1. **Leading slash, always.** `/assets/photo.png` renders. `photo.png` or
+>    `assets/photo.png` (no slash) render as **literal text**.
+> 2. **Bundle the file.** The path is relative to the package root, so
+>    `/assets/photo.png` means `<package>/assets/photo.png`. iA Presenter does
+>    **not** fetch remote `http(s)` image URLs — a web URL renders nothing.
+
+An image alone in its own cell fills the slide; alt text becomes a caption.
 
 ### Image Attributes
 
-```markdown
-	![Alt text](/assets/image.jpg)
-	size: contain
-```
+Richer attributes — `size: cover|contain`, `background: true`, `opacity`,
+`filter: grayscale|lighten|darken|sepia|blur`, `position` — are part of iA
+Presenter's **content-block** handling and are set in the app's image inspector.
+They are not reliably expressible from plain Markdown text, so do **not** depend
+on a trailing `size:` line rendering. For full-bleed mood, put a single image in
+its own cell (it fills the slide) and adjust framing in-app if needed.
 
-Available image attributes:
-- `size: contain` - Fit entire image within slide
-- `size: cover` - Cover entire slide
-- `opacity: 0.5` - Set transparency (0.1 to 1.0)
-- `filter: grayscale` - Apply filter (also: `lighten`, `darken`, `sepia`, `blur`)
-- `position: center` - Position image
-- `background: true` - Place the image behind text, so the title and other elements sit on top
-
-> **Markdown vs. Content Blocks.** Plain Markdown (`![alt](path)`) handles *basic* image insertion. The richer attributes above (cover/contain, background, opacity, filters, position) are part of iA Presenter's **content-block** handling — in the app they are usually set through the image's floating inspector menu and stored with the block. The indented `key: value` form shown here is the convention this corpus uses to represent that intent in plain text; verify the exact rendering in-app for production decks. See "Captions and Content Blocks" below.
-
-In this repository, image paths under `/assets/` are illustrative syntax examples. The referenced files are not bundled unless explicitly added later.
+In this repository, image paths under `/assets/` in the prose examples are
+illustrative; bundle real files at those paths before the deck will render them.
 
 ### Multiple Images
 
 ```markdown
 ## Multiple Images
 
-	![Image 1](/assets/image1.jpg)
+![Image 1](/assets/image1.jpg)
 
-	![Image 2](/assets/image2.jpg)
+![Image 2](/assets/image2.jpg)
 ```
+
+Each image in its own cell (blank line between). Four or more image cells become
+a grid — see `skills/ia-presenter-deck/references/LAYOUT-ENGINE.md`.
 
 ### Captions and Content Blocks
 
@@ -220,7 +227,7 @@ iA Presenter also supports content blocks — a path on its own line, optionally
 ```markdown
 ## Visual Concept
 
-	/assets/diagram.jpg "How the pieces fit together"
+/assets/diagram.jpg "How the pieces fit together"
 ```
 
 Content blocks accept metadata such as `Title`, `Alt`, and `Width`. Reach for this form when you want a caption or finer control than plain `![alt](path)` gives.
