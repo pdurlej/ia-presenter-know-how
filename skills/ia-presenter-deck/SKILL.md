@@ -80,8 +80,9 @@ Rules:
 ## Self-Review
 
 Before delivery:
-1. score the deck using `references/RUBRIC.md`
-2. identify the weakest 3 slides or patterns
-3. refine once before presenting the result
+1. run `python3 tools/ialint.py <package>.iapresenter` and fix every ERROR (and ideally the warnings) — these are render-breaking mistakes the linter catches deterministically
+2. score the deck using `references/RUBRIC.md`
+3. identify the weakest 3 slides or patterns
+4. refine once before presenting the result
 
 If the draft still resembles anti-patterns from `examples/03-anti-patterns.md`, do not present it as final.
