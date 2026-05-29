@@ -13,11 +13,17 @@
 Use heading levels to control slide hierarchy:
 
 ```markdown
-# Title          → Creates cover page (always visible)
-## Subtitle      → Subtitle on cover (always visible)
+# Title          → Cover title on the first slide (always visible)
+## Subtitle      → Cover subtitle on the first slide (always visible)
 ---             → New slide separator
 ## Slide Title   → Default content slide title in this corpus
+# Big Heading    → Mid-deck: a large section/landing heading (use sparingly)
+### / ####       → Sub-headings and heading stacks (always visible)
 ```
+
+**Headings are always visible.** Every heading level (`#` through `####`) is shown to the audience automatically — it does NOT need a TAB. Only *body* text needs a TAB to appear on the slide. This is why heading stacks like `###` + `####` work as a visible slide surface with no list at all.
+
+A standalone `#` heading is not reserved for the cover. On the first slide it is the cover title; later in the deck it reads as a large, standalone section or landing heading. Use it deliberately for resets, turning points, and closers — not as a routine content-slide title (use `##` for those).
 
 ### Cover Slide
 
@@ -348,10 +354,12 @@ This image illustrates our core concept.
 
 | Element | Syntax | Visibility |
 |---------|--------|------------|
-| Cover title | `# Title` | Always |
-| Subtitle | `## Subtitle` | Always |
+| Cover title | `# Title` (first slide) | Always |
+| Subtitle | `## Subtitle` (first slide) | Always |
 | Slide break | `---` | N/A |
 | Content slide title | `## Slide Title` | Always |
+| Section / landing heading | `# Big Heading` (mid-deck) | Always |
+| Sub-heading / heading stack | `### Text` / `#### Text` | Always |
 | Slide content | `⇥Text` | Audience |
 | Speaker notes | `Text` (no tab) | Presenter only |
 | Bold | `**text**` | As positioned |
@@ -373,7 +381,7 @@ This image illustrates our core concept.
 
 ### Problem: Headings not visible
 
-**Solution:** In this corpus, cover titles use `#` and `##`, and content slide titles use `##` after `---`.
+**Solution:** Headings are always visible and never need a TAB. On the first slide, use `#` and `##` for the cover; for content slides use `##` after `---`; use `#` mid-deck only for large section or landing slides; use `###`/`####` for sub-headings and heading stacks.
 
 ### Problem: Speech notes visible to audience
 

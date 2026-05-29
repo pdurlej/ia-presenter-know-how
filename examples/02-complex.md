@@ -1,277 +1,214 @@
-# Complete iA Presenter Example
+# Complete Example — Patterns That Don't Look Like PowerPoint
 
-> **A comprehensive presentation showcasing all iA Presenter syntax and features.**
-
----
-
-# Mastering iA Presenter
-
-## Your guide to creating beautiful presentations
+> A larger iA Presenter deck that demonstrates the full syntax in this corpus while staying a real deck: assertive titles, a visible surface that carries meaning, speaker notes that sound spoken, and a close that lands.
+>
+> Read it two ways — as a syntax catalog, and as a model of how a good deck is shaped. Every indented line uses a real TAB.
 
 ---
 
-## What You'll Learn
+# Your Slides Are Fighting Your Talk
+## How iA Presenter syntax keeps them on the same side
 
-	1. Core syntax rules
-	2. Text formatting
-	3. Layout patterns
-	4. Image handling
-	5. Best practices
+This is the cover: a `#` title and a `##` subtitle. I open with the tension the whole deck resolves — most tools make you design first and think later, and the slides end up competing with the speaker.
 
 ---
 
-# 1. Core Syntax
+## Headings carry the slide
 
-## The Hierarchy System
+Every heading is automatically visible to the audience — no TAB needed. Body text is different: it only shows if I indent it with a TAB.
 
-iA Presenter uses headings to structure your presentation:
+`# Title` and `## Subtitle` build the cover
 
-`# Title` → Cover page
+`## Slide Title` titles a content slide
 
-`## Subtitle` → Cover subtitle
+`---` starts a new slide
 
-`---` → New slide
-
-`## Slide Title` → Slide title
+This is the one mental model that makes everything else click, so I slow down here.
 
 ---
 
-## Speech vs Slide Text
+## Speech and slide, side by side in one file
 
-This is speaker notes. Only you see this.
+This flush-left line is speech — only I see it. The next indented line is what the room sees.
 
-	This text appears on the slide. Audience sees this.
+	This text appears on the slide.
 
-This is also speaker notes.
-
-	And this is slide text too.
+Back to speech again. I never copy my notes onto the slide; I promote only the line that deserves to be seen.
 
 ---
 
-# 2. Text Formatting
+## Emphasis, used sparingly
 
-## Bold and Italic
+Inline formatting works, but on a slide a little goes a long way.
 
-**Bold text** for emphasis
+	**Bold** for the one word that matters
 
-*Italic text* for subtle emphasis
+	*Italic* for a lighter, quieter shift
 
-**Combined *both* formats**
+	`inline code` when the literal token is the point
 
----
-
-## Lists
-
-Ordered lists work well for sequential ideas:
-
-	1. First point
-	2. Second point
-	3. Third point
-
-Unordered lists for loose ideas:
-
-	- Point one
-	- Point two
-	- Point three
+If everything is bold, nothing is.
 
 ---
 
-## Links and Quotes
+## Lists earn their shape
 
-### External Links
+Ordered when sequence matters:
 
-	[Visit iA Presenter](https://ia.net/presenter)
+	1. First this
+	2. Then this
+	3. Then this
 
-### Block Quotes
+Unordered when the items are siblings, not steps:
 
-	> "The only way to learn to speak... is to speak."
+	- One angle
+	- Another angle
+	- A third angle
+
+I reach for a list because the relationship is real, not to fill the slide.
+
+---
+
+## Let the quote do the talking
+
+A customer or expert voice lands harder than my paraphrase. I read the room, then let it sit.
+
+	> "The only way to learn to speak is to speak."
 	> — Dale Carnegie
 
----
-
-# 3. Layout Patterns
-
-## Stacked Layout (Default)
-
-Content stacks vertically on the slide:
-
-	First section of content
-
-	Second section of content
-
-	Third section of content
+I add a line that says what to do with the quote.
 
 ---
 
-## Side-by-Side Layout
+## Links point somewhere real
 
-	Left panel content visible to audience
+When a link belongs on the slide, indent it so the audience sees it.
 
-	Right panel content visible to audience
+	[Read the iA Presenter how-to](https://ia.net/presenter/how-to)
 
----
-
-## Three-Column Layout
-
-	Column one content
-
-	Column two content
-
-	Column three content
+Otherwise keep the URL in your notes and just say where it leads.
 
 ---
 
-# 4. Images
+## Stacked is the honest default
 
-## Basic Image
+When each point sharpens the one before it, let the slide stack vertically.
 
-	![A beautiful landscape](/assets/landscape.jpg)
+	The problem feels like volume.
+
+	It's actually delay.
+
+	Delay is what breaks trust.
+
+Stacking shows the argument building, one beat at a time.
+
+---
+
+## Split only for real contrast
+
+Two indented blocks separated by a blank line WITHOUT a TAB sit side by side. I use it only when the comparison is the message.
+
+	Before
+	Slow, manual, anxious
+
+	After
+	Fast, assisted, confident
+
+The blank separator line must have no TAB, or the blocks stack instead.
+
+---
+
+## Three columns when the set is the point
+
+	Discover
+	Talk to users
+
+	Decide
+	Pick one bet
+
+	Ship
+	Put it in front of people
+
+Three is usually the limit before a slide stops breathing.
+
+---
+
+## A heading stack reads in one glance
+
+### The queue is not the problem
+
+#### The handoff is
+
+No TABs here — headings are visible by default. I use `###` for the main thought and `####` for the turn or qualifier. Great for a fast rhetorical beat with no list at all.
+
+---
+
+## One image, one job
+
+	![A wide, calm landscape](/assets/landscape.jpg)
 	size: contain
 
-This image demonstrates the `size: contain` attribute.
+A picture should advance the argument, not decorate it. In this repo `/assets/` paths are illustrative — the files aren't bundled.
 
 ---
 
-## Images with Opacity
+## Set the mood with a filter
 
-	![Image with transparency](/assets/photo.jpg)
-	size: contain
+	![A muted background scene](/assets/scene.jpg)
+	size: cover
+	filter: grayscale
 	opacity: 0.7
 
-You can adjust transparency from 0.1 to 1.0.
+Use `size`, `filter`, and `opacity` to keep an image from shouting over the words. (Some image attributes depend on iA Presenter's content-block handling — check the syntax reference.)
 
 ---
 
-## Image Filters
-
-	![Grayscale image](/assets/colorful.jpg)
-	size: contain
-	filter: grayscale
-
-Available filters include `grayscale`, `sepia`, and more.
-
----
-
-# 5. Advanced Features
-
-## Code Blocks
-
-### Python Example
+## Code when the code is the message
 
 	```python
 	def greet(name):
 	    print(f"Hello, {name}!")
 	```
 
-Use code blocks for technical presentations.
+For a technical room, the snippet is the slide. I keep it short enough to read from the back.
 
 ---
 
-## Tables
+## A tiny table for exact deltas
 
-### Team Members
+	| Metric | Before | Target |
+	|--------|--------|--------|
+	| First response | 11h | < 3h |
+	| Escalations | 27% | < 15% |
 
-	| Name | Role | Department |
-	|------|------|------------|
-	| Alice | Lead | Design |
-	| Bob | Senior | Engineering |
-	| Carol | Junior | Marketing |
-
----
-
-## Multiple Images
-
-	![Product screenshot](/assets/product.jpg)
-
-	![Team photo](/assets/team.jpg)
-
-Images can be placed side-by-side or stacked.
+A table only when the grid itself is the point. Three rows beat three slides; ten rows beat the audience into submission.
 
 ---
 
-# 6. Comparison Examples
+## Same surface, two sides
 
-## This Side
+### Reading from slides
 
-Content for the left panel showing option A.
+#### Kills attention
 
-This is additional detail about option A.
+### Talking to people
 
-## That Side
+#### Earns it
 
-Content for the right panel showing option B.
-
-More information about option B.
+A clean contrast can be built from headings alone — no list, no table, no split needed.
 
 ---
 
-# 7. Common Patterns
+# Write the talk. The deck follows.
 
-## Title and Bullet Points
-
-Main concept explained here:
-
-	First supporting detail
-	Second supporting detail
-	Third supporting detail
-
-Remember to keep it minimal.
+I close on the through-line, not a recap. If the room remembers one sentence, I want it to be this one.
 
 ---
 
-## Quote and Context
+## What to do next
 
-The quote sets the tone:
+	1. Open a new deck
+	2. Write your script flush-left
+	3. Promote one line per slide with a TAB
 
-	> "Simplicity is the ultimate sophistication."
-	> — Leonardo da Vinci
-
-This explains why minimal design matters.
-
----
-
-## Image with Explanation
-
-	![Visual representation](/assets/diagram.jpg)
-
-The diagram illustrates our core concept.
-
----
-
-# Best Practices Summary
-
-## DO
-
-	✅ Use TABS for slide content
-	✅ Keep text minimal
-	✅ Tell a great story
-	✅ Use meaningful images
-	✅ Practice your delivery
-
-## DON'T
-
-	❌ Read from slides
-	❌ Use spaces instead of TABS
-	❌ Put walls of text
-	❌ Use generic stock images
-	❌ Overuse bullet points
-
----
-
-# Conclusion
-
-## Ready to Create
-
-You now have all the tools to create beautiful presentations in iA Presenter.
-
-## Start Your Story
-
-Focus on your message first. Everything else follows naturally.
-
----
-
-# Thank You
-
-## Questions?
-
-Let's continue the discussion!
+Questions come after the landing, never instead of it.

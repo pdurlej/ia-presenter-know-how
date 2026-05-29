@@ -1,108 +1,49 @@
-# Basic Presentation Example
+# Basic Example — A Minimal, Strong Deck
 
-> **A minimal, working iA Presenter presentation demonstrating core syntax.**
-
----
-
-# Introduction to iA Presenter
-
-## Create beautiful presentations fast
+> A minimal iA Presenter deck that still follows good-deck rules: speaker notes carry the talk, the visible slide surface carries real meaning, and the deck lands on an action instead of a "Thank you" slide.
+>
+> Lines indented with a real TAB are visible to the audience. Flush-left lines are speaker notes you say out loud.
 
 ---
 
-## What is iA Presenter?
+# Say More, Show Less
+## A minimal iA Presenter deck
 
-A story-based presentation app that helps you focus on what you want to say.
-
----
-
-## Key Features
-
-	1. Text-first approach
-	2. Automatic layouts
-	3. Built-in themes
-	4. Responsive design
-	5. Easy sharing
+This is the cover. The title makes a claim; the subtitle frames it. I open by telling the room that this deck is small on purpose, because the discipline of cutting is the whole point.
 
 ---
 
-## Get Started
+## A slide is not your script
 
-Focus on your story. Add visuals later.
+Here is the one idea the audience should leave with. Everything I'm saying right now lives in speaker notes — the room never sees it.
 
----
+	You say the script.
+	They see the slide.
 
-# Why iA Presenter?
-
-## Traditional Apps
-
-Traditional presentation apps start with design, not content.
+iA Presenter keeps both in one file but treats them differently, so I write the talk and the slides at the same time without copying one into the other.
 
 ---
 
-## The Problem
+## One idea per slide
 
-	- Too much time on formatting
-	- Distraction from your message
-	- Reading from slides
-	- Generic stock images
+If I can't say what a slide is for in a single breath, it's doing too much. So I keep the visible surface to the shape of the idea and let my voice fill in the rest.
 
----
-
-## The Solution
-
-Start with your story in plain text. Design happens automatically.
+	One idea
+	A few words
+	Then move on
 
 ---
 
-# How It Works
+## Write first, design later
 
-## Write Your Script
+I don't reach for layouts yet. I get the words right, in order, said out loud — because the structure of the talk is the structure of the deck.
 
-Use Markdown to write what you want to say.
-
----
-
-## Add Visuals
-
-Drag and drop images, or use Unsplash integration.
+	1. Draft the script flush-left
+	2. Promote the key lines with a TAB
+	3. Add visuals only where they earn their place
 
 ---
 
-## Create Slides
+# Start writing. Stop formatting.
 
-Use `---` to create new slides automatically.
-
----
-
-# Benefits
-
-## Save Time
-
-Import existing text and start presenting faster.
-
----
-
-## Better Presentations
-
-Focus on your message, not formatting.
-
----
-
-## Easy Sharing
-
-Share with a link that works on any device.
-
----
-
-# Conclusion
-
-## Start Creating Today
-
-Your story deserves to be told beautifully.
-
----
-
-## Thank You!
-
-Questions?
+I close on the move I want them to make, not on a logo or a "thank you." This is the one line I'd want repeated in the hallway afterwards.
