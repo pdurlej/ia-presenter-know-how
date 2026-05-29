@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-label="Placeholder 16:9 image">
+  <rect width="1920" height="1080" fill="#11161d"/>
+  <rect x="2" y="2" width="1916" height="1076" fill="none" stroke="#2b3340" stroke-width="4"/>
+  <g fill="#3a4554">
+    <circle cx="760" cy="470" r="70"/>
+    <path d="M520 760 L820 470 L1040 690 L1240 490 L1400 760 Z"/>
+  </g>
+  <text x="960" y="900" font-family="Helvetica, Arial, sans-serif" font-size="56" fill="#5b6774" text-anchor="middle">/assets/placeholder-16x9.svg</text>
+</svg>

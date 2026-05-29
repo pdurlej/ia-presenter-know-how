@@ -26,6 +26,7 @@ This is not an official iA Presenter repository. iA Presenter is a commercial pr
 - `examples/01-basic.md`: minimal working example
 - `examples/02-complex.md`: larger example covering more patterns
 - `examples/03-anti-patterns.md`: common mistakes and corresponding fixes
+- `examples/04-packaged-deck.iapresenter/`: a full `.iapresenter` package example showing the complete output contract (`text.md` + `info.json`)
 - `skills/ia-presenter-deck/`: canonical repo-first skill for generating and improving `.iapresenter` decks
 - `golden-candidates/`: first-pass decks for iterative feedback and future Golden Deck development
 - `docs/01-course/`: six tutorial-style documents based on official how-to material
@@ -175,6 +176,7 @@ ia-presenter-know-how/
 ├── GITHUB_SETUP.md
 ├── assets/
 │   ├── .gitkeep
+│   ├── placeholder-16x9.svg
 │   └── README.md
 ├── docs/
 │   ├── 01-course/
@@ -188,7 +190,10 @@ ia-presenter-know-how/
 ├── examples/
 │   ├── 01-basic.md
 │   ├── 02-complex.md
-│   └── 03-anti-patterns.md
+│   ├── 03-anti-patterns.md
+│   └── 04-packaged-deck.iapresenter/
+│       ├── text.md
+│       └── info.json
 ├── golden-candidates/
 │   ├── README.md
 │   ├── 01-ai-support-copilot-pitch.iapresenter
@@ -232,9 +237,11 @@ For human readers:
 
 - current positioning: LLM-first corpus, secondarily readable as human documentation
 - canonical repo-first skill added under `skills/ia-presenter-deck/`
-- syntax convention standardized around `##` as the default content-slide title
+- syntax convention standardized: `##` is the default content-slide title; `#` is the cover title on slide 1 and a sparing section/landing heading mid-deck; all headings are auto-visible
+- syntax reference covers the full feature set: layouts, images and content blocks, tables, code, reference-style links, math (KaTeX), footnotes and citations
+- `examples/` now includes a packaged `.iapresenter` example so the full output contract is demonstrated, not just described
 - `docs/03-videos/` is documented as transcripts and notes, not five full transcripts
-- `assets/` is documented as path convention only, not a bundled media pack
+- `assets/` ships one placeholder; it is not yet a full media pack
 - Golden Deck work now has a dedicated candidate loop in `golden-candidates/`
 
 Possible future work:
