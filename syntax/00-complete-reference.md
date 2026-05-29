@@ -209,13 +209,21 @@ iA Presenter also supports content blocks — a path on its own line, optionally
 
 Content blocks accept metadata such as `Title`, `Alt`, and `Width`. Reach for this form when you want a caption or finer control than plain `![alt](path)` gives.
 
-### YouTube Videos
+### Videos and YouTube
+
+Use an empty-text Markdown link whose destination is the media file or video URL:
 
 ```markdown
 ## Video Example
 
-	[https://www.youtube.com/watch?v=VIDEO_ID]
+	[](https://www.youtube.com/watch?v=VIDEO_ID)
+
+	[](/assets/demo.mov)
 ```
+
+Note the empty `[]` link text — the URL goes in the parentheses, exactly like an image without the leading `!`.
+
+In the app, the most reliable way to add a YouTube video is the **Add YouTube Video** button in the Media Manager. For best results, give a video its own otherwise-empty slide so it plays at full size.
 
 ---
 
