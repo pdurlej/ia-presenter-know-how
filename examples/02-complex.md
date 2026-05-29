@@ -165,10 +165,10 @@ Use `size`, `filter`, and `opacity` to keep an image from shouting over the word
 
 ## Code when the code is the message
 
-	```python
-	def greet(name):
-	    print(f"Hello, {name}!")
-	```
+```python
+def greet(name):
+    print(f"Hello, {name}!")
+```
 
 For a technical room, the snippet is the slide. I keep it short enough to read from the back.
 
@@ -176,10 +176,10 @@ For a technical room, the snippet is the slide. I keep it short enough to read f
 
 ## A tiny table for exact deltas
 
-	| Metric | Before | Target |
-	|--------|--------|--------|
-	| First response | 11h | < 3h |
-	| Escalations | 27% | < 15% |
+| Metric | Before | Target |
+|--------|--------|--------|
+| First response | 11h | < 3h |
+| Escalations | 27% | < 15% |
 
 A table only when the grid itself is the point. Three rows beat three slides; ten rows beat the audience into submission.
 

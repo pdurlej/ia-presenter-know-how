@@ -50,11 +50,11 @@ This slide adds credibility because restraint is part of the story.
 
 Keep the table small enough to read in one glance.
 
-	| Metric | Before | After |
-	|---|---|---|
-	| First response time | 9h 20m | 2h 15m |
-	| Internal handoffs | 3.4 | 1.6 |
-	| CSAT | 82 | 91 |
+| Metric | Before | After |
+|---|---|---|
+| First response time | 9h 20m | 2h 15m |
+| Internal handoffs | 3.4 | 1.6 |
+| CSAT | 82 | 91 |
 
 ---
 ### What surprised us

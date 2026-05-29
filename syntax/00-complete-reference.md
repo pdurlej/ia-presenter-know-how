@@ -81,6 +81,22 @@ The audience won't see this text at all.
 
 **Rule:** Use TAB characters (`\t`) for slide content. Do NOT use spaces.
 
+### What needs a TAB, and what does not
+
+The TAB rule applies to **body text, lists, and quotes**. Some block constructs are shown on the slide *automatically* and must stay flush-left:
+
+| Construct | On slide via | TAB? |
+|-----------|--------------|------|
+| Headings (`#`–`####`) | automatic | never |
+| Images / content blocks | automatic | never |
+| **Tables** | automatic | **never — a TAB makes them render as code** |
+| **Fenced code blocks** | automatic | **never — a TAB breaks the fence** |
+| Body paragraphs | the TAB | yes |
+| Lists | the TAB | yes |
+| Quotes | the TAB | yes |
+
+Rule of thumb: if it's a recognized Markdown block (heading, image, table, code fence), let it sit flush-left. Only prose, lists, and quotes need the TAB.
+
 ---
 
 ## Text Formatting
@@ -229,27 +245,35 @@ In the app, the most reliable way to add a YouTube video is the **Add YouTube Vi
 
 ## Code Blocks
 
-```markdown
+Use fenced code blocks, flush-left with **no TAB**:
+
+````markdown
 ## Code Example
 
-	```python
-	def hello():
-	    print("Hello, world!")
-	```
+```python
+def hello():
+    print("Hello, world!")
 ```
+````
+
+> Like tables, code blocks must start at the beginning of the line. Indented code blocks are not supported in iA Presenter — a leading TAB breaks the fence. Fenced code is shown on the slide automatically, so it does not need a TAB.
 
 ---
 
 ## Tables
 
+Write the table flush-left, with **no TAB** in front of any row:
+
 ```markdown
 ## Table Example
 
-	| Name | Age | City |
-	|------|-----|------|
-	| John | 25  | NYC  |
-	| Jane | 30  | LA   |
+| Name | Age | City |
+|------|-----|------|
+| John | 25  | NYC  |
+| Jane | 30  | LA   |
 ```
+
+> **Critical — do not TAB-indent tables.** A leading TAB turns the table into an *indented code block*, so it renders as raw monospace text (`| Name | Age |`) instead of a grid. Tables appear on the slide automatically, like headings and images — they are not body text. The first row and the `|---|` divider must start at the beginning of the line. (Live-verified on iA Presenter mobile.)
 
 ---
 

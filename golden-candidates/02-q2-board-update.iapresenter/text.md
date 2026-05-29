@@ -60,11 +60,11 @@ This slide earns trust only if it sounds direct.
 
 The next board deck should be able to say this with numbers, not hope.
 
-	| Signal | Now | Next quarter target |
-	|---|---|---|
-	| Activation in first 14 days | uneven | repeatable |
-	| New deals | many mixed-fit | fewer higher-fit |
-	| Margin discipline | recovering | stable |
+| Signal | Now | Next quarter target |
+|---|---|---|
+| Activation in first 14 days | uneven | repeatable |
+| New deals | many mixed-fit | fewer higher-fit |
+| Margin discipline | recovering | stable |
 
 ---
 ### Risks we are not hiding
