@@ -68,12 +68,14 @@ Speaker notes stay flush-left.
 ```
 
 Core rules:
-- `#` and `##` create the cover slide.
+- On the first slide, `#` is the cover title and `##` is the cover subtitle.
 - `---` starts a new slide.
 - `##` is the default content-slide title convention in this corpus.
+- Mid-deck, a standalone `#` heading is a large section/landing heading — use it sparingly for resets, turns, and closers.
+- All headings (`#` through `####`) are automatically visible to the audience; they do not need a TAB.
 - Text without a TAB is speaker notes.
-- Text with a TAB is audience-visible slide content.
-- Headings, subheadings, quotes, tables, images, and layout structure also shape what the audience sees.
+- Text with a TAB is audience-visible slide *body* content.
+- Quotes, tables, images, and layout structure also shape what the audience sees.
 - Side-by-side layouts depend on cell breaks; see the syntax reference and worked examples for the exact patterns used here.
 
 ---
