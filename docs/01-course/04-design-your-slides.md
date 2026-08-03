@@ -28,6 +28,8 @@ Choose a slide layout that best suits your content.
 
 💡 All text and graphics you add to a slide live in *cells*. You may want to split content across cells by adding a single line break (press ↵), such as between a heading and an image. Without line breaks, all your slide elements will share the same cell—which may limit layout options.
 
+> **Repo note.** In the Markdown file this means a **blank line** between the two blocks. One newline is not enough — without an empty line the heading and the image share a single cell. Two cells → side-by-side; four or more → a grid (verified: four image cells → 2×2). See `skills/ia-presenter-deck/references/LAYOUT-ENGINE.md`.
+
 As you create slides and add cells, Presenter will analyze your slide's content and select the optimal layout for your text and graphics.
 
 But how will your slides look on other displays or devices? Good news: Layouts in Presenter are responsive. That means your slides will automatically adapt to all kinds of displays, including different monitors, tablets, and phones. Your audience will see your presentation at its best, no matter what device they use. Head to the [Layouts](https://ia.net/presenter/support/visuals/layouts) page to learn more.

@@ -103,8 +103,19 @@ Only score this when candidate mode is used.
 - Does each candidate express a different rhythm or rhetorical strategy?
 - Is one direction obviously closest to Golden Deck quality?
 
+## 12. Art Direction
+
+- Is a theme set explicitly in `info.json` (`net.ia.presenter.template`), not left default?
+- Does the deck open AND close on a full-bleed image slide?
+- Is there an image at each narrative turn, or is this a document with headings?
+- Is every image root-relative (`/assets/...`) AND bundled in the package?
+- Does the deck avoid depending on `size:` / `opacity:` / `filter:` attribute lines?
+- Does at least 40% of slides carry an image?
+
+Any "no" on the last three: do not deliver — the deck will not render as intended.
+
 ## Delivery Threshold
 
 - 8-10 on most items: ready
 - repeated 5-6 scores: revise
-- any 0-4 on headline strength, visible slide surface, closing quality, or iA Presenter fit: do not deliver as final
+- any 0-4 on headline strength, visible slide surface, closing quality, iA Presenter fit, or art direction: do not deliver as final

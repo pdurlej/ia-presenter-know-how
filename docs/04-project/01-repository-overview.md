@@ -25,6 +25,14 @@ It is still readable by humans, but the repo is not positioned as a normal end-u
 
 ## Main Repository Areas
 
+### `tools/`
+
+- `ialint.py` — deterministic linter for `.iapresenter` packages; catches TAB-indented
+  tables/code fences and image paths that are not root-relative, not bundled, or remote.
+  Run it before delivering any deck.
+- `genbg.py` — generates abstract gradient backgrounds into a package's `assets/` folder,
+  dependency-free, so an LLM can produce an image-backed deck with no external assets.
+
 ### `syntax/`
 
 Contains the working syntax reference used by this corpus.
@@ -123,7 +131,7 @@ Candidate decks are expected to be revised after visual review. A deck only beco
 
 ## Current Limits
 
-- no bundled image pack
+- no photo library; backgrounds are generated on demand with `tools/genbg.py` and bundled per deck
 - uneven video transcript coverage
 - no automated visual QA pipeline yet
 - no final Golden Deck approved yet

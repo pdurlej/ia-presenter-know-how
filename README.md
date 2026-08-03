@@ -33,6 +33,8 @@ This is not an official iA Presenter repository. iA Presenter is a commercial pr
 - `docs/02-tips/`: twelve articles on storytelling, delivery, visuals, and Markdown
 - `docs/03-videos/`: five video-derived files with mixed completeness
 - `docs/04-project/`: repo-specific project documentation, package format notes, and Golden Deck workflow
+- `tools/`: `ialint.py` (render-correctness linter) and `genbg.py` (background generator)
+- `tests/`: unit tests for the linter, run in CI
 
 Video coverage in `docs/03-videos/` is intentionally uneven:
 - `01-quick-tour.md`: transcript-based note with key points
@@ -45,7 +47,7 @@ Video coverage in `docs/03-videos/` is intentionally uneven:
 
 ## Important Limits
 
-- `assets/` does not include the example image files referenced in the examples. Paths like `/assets/landscape.jpg` are illustrative syntax examples, not a bundled asset pack.
+- `assets/` ships only a placeholder. Paths like `/assets/landscape.jpg` in prose examples have no file behind them — but in a real `.iapresenter` package the file MUST be bundled at that path or the image does not render. Generate one with `tools/genbg.py` if you have no photo.
 - The video directory contains transcripts where available and notes where a transcript was not captured or appears duplicated.
 - This cleanup does not introduce a community contribution workflow. Any future community layer should be added explicitly, not implied by README copy.
 - The repository copy of `skills/ia-presenter-deck/` is canonical; a copy under `~/.codex/skills/` is only a deployment location.
@@ -77,6 +79,7 @@ Core rules:
 - Text without a TAB is speaker notes.
 - Text with a TAB is audience-visible slide *body* content (paragraphs, lists, quotes).
 - Tables, fenced code blocks, headings, and images appear on the slide automatically — keep them flush-left, never TAB-indented (a TAB makes a table or code fence render as raw code).
+- Images must be root-relative *and* bundled: `![Alt](/assets/photo.png)` with the file at `<package>/assets/photo.png`. No leading slash renders as literal text; a remote `http(s)` URL renders nothing.
 - Side-by-side layouts depend on cell breaks; see the syntax reference and worked examples for the exact patterns used here.
 
 ---
@@ -196,6 +199,7 @@ ia-presenter-know-how/
 │       └── info.json
 ├── golden-candidates/
 │   ├── README.md
+│   ├── 06-image-first-reference.iapresenter/   ← reference for visual style
 │   ├── 01-ai-support-copilot-pitch.iapresenter
 │   ├── 02-q2-board-update.iapresenter
 │   ├── 03-customer-interview-workshop.iapresenter
@@ -207,8 +211,13 @@ ia-presenter-know-how/
 │       ├── SKILL.md
 │       ├── agents/openai.yaml
 │       └── references/
-└── syntax/
-    └── 00-complete-reference.md
+├── syntax/
+│   └── 00-complete-reference.md
+├── tests/
+│   └── test_ialint.py
+└── tools/
+    ├── ialint.py
+    └── genbg.py
 ```
 
 ---
@@ -241,7 +250,9 @@ For human readers:
 - syntax reference covers the full feature set: layouts, images and content blocks, tables, code, reference-style links, math (KaTeX), footnotes and citations
 - `examples/` now includes a packaged `.iapresenter` example so the full output contract is demonstrated, not just described
 - `docs/03-videos/` is documented as transcripts and notes, not five full transcripts
-- `assets/` ships one placeholder; it is not yet a full media pack
+- `assets/` ships one placeholder; per-deck images are generated with `tools/genbg.py` and bundled in the package
+- render-correctness is enforced by `tools/ialint.py`, wired into CI (`.github/workflows/lint-decks.yml`)
+- the theme is set from the package (`info.json` → `net.ia.presenter.template`), verified to work
 - Golden Deck work now has a dedicated candidate loop in `golden-candidates/`
 
 Possible future work:
