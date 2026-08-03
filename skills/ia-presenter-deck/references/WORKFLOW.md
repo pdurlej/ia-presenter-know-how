@@ -64,8 +64,10 @@ from a styled document. See `VISUAL-DESIGN.md`, `THEMES.md`, `LAYOUT-ENGINE.md`.
 
 - pick a theme in `info.json` that fits the room (never the default minimal one)
 - plan images: open and close on a full-bleed image, and use one at each turn
-- if no photos are available, generate backgrounds with `tools/genbg.py` and
-  bundle them under `/assets/`
+- if no photos are available, run
+  `python3 tools/genbg.py <deck>.iapresenter/assets --palette <name>`
+  so the file lands on disk at `<package>/assets/<name>.png`, then reference it in
+  `text.md` as `![Mood](/assets/<name>.png)` — leading slash mandatory
 - vary the silhouette: alternate image slides, big-type landings, heading
   stacks, and at most one small table
 - remember the ceiling: no shapes, cards, or charts — aim editorial, not

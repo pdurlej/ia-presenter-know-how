@@ -41,10 +41,12 @@ For most generation tasks, load context in this order:
 
 1. `syntax/00-complete-reference.md`
 2. `examples/03-anti-patterns.md`
-3. one worked example from `examples/`
-4. relevant files from `docs/02-tips/`
-5. the canonical skill and its references
-6. one or more candidate decks if matching rhythm already exists
+3. `skills/ia-presenter-deck/references/VISUAL-DESIGN.md` and `THEMES.md` (art direction — always)
+4. `skills/ia-presenter-deck/references/LAYOUT-ENGINE.md` when layout is load-bearing
+5. one worked example from `examples/` — use `golden-candidates/06-image-first-reference.iapresenter/` for visual style
+6. relevant files from `docs/02-tips/`
+7. the canonical skill and its references
+8. one or more candidate decks if matching rhythm already exists
 
 Do not load the whole repo by default. Pull only the files that materially change the deck.
 
@@ -105,7 +107,7 @@ Instead choose the right visible surface for the job:
 - proof table
 - section reset
 - one-line landing
-- image-led slide when a real image helps
+- image-led slide — the default for the opener, the closer, and every narrative turn; generate backgrounds with `tools/genbg.py` if no photos exist
 
 Primary references:
 - `skills/ia-presenter-deck/references/SLIDE-SURFACE-PATTERNS.md`
@@ -138,6 +140,14 @@ Do not output a plain text file renamed to `.iapresenter`.
 
 Primary reference:
 - `docs/04-project/02-iapresenter-package-and-skill.md`
+
+---
+
+## Step 7b: Lint
+
+Run `python3 tools/ialint.py <deck>.iapresenter` and fix every ERROR before opening the deck.
+E001/E002 (TAB-indented table or code fence) and E003/E004/E005 (image path not root-relative,
+remote, or not bundled) are render-breaking — and they are exactly the mistakes an LLM cannot see.
 
 ---
 

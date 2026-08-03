@@ -37,11 +37,19 @@ In this repository, the current candidate decks use a small, stable metadata sha
 - `version: 2`
 - a `net.ia.presenter` block with template and preset
 
-### Optional assets
+### Assets (not optional)
 
-Some decks may later include local `assets/` inside the package or use external or absolute paths during drafting.
+Any deck with images must carry them inside the package:
 
-This repository does not currently bundle a real shared asset pack.
+```text
+example-deck.iapresenter/
+├── info.json
+├── text.md
+└── assets/
+    └── cover.png
+```
+
+Reference them root-relative from `text.md`: `![Cover](/assets/cover.png)`. A path with no leading slash renders as literal text; a remote `http(s)` URL renders nothing. Generate backgrounds with `tools/genbg.py` when no photos are available. See `golden-candidates/06-image-first-reference.iapresenter/` for a worked package.
 
 ---
 

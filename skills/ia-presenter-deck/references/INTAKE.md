@@ -10,7 +10,7 @@ Ask only for information that materially changes the deck.
 4. How long is the talk, or how many slides should it roughly be?
 5. What tone should it have?
 6. Is there real evidence or data that must appear?
-7. Are images or visuals available, or should the deck stay mostly text-first?
+7. Are real photos available? If not, backgrounds are generated with `tools/genbg.py` — a deck is never shipped image-free.
 8. Are there hard constraints or taboo topics?
 
 ## Safe Defaults
@@ -22,7 +22,7 @@ Ask only for information that materially changes the deck.
 - deck size: 8-12 core slides
 - tone: clear, confident, human
 - evidence: no hard data unless provided
-- visuals: text-first deck with selective layout contrast
+- visuals: image-backed by default — full-bleed image on the opener, the closer, and each narrative turn; generate backgrounds with `tools/genbg.py` when no photos are supplied
 - constraints: none unless user gives them
 
 ## Notes

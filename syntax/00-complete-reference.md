@@ -133,6 +133,18 @@ Rule of thumb: if it's a recognized Markdown block (heading, image, table, code 
 
 ## Layout Control
 
+### Cells drive layout
+
+A slide is divided into **cells**: blocks of slide content separated by a **blank line**.
+You never name a layout — the engine picks one from the cell count and content. Verified live:
+
+- one image alone → fills the slide (full-bleed)
+- two cells → side-by-side on wide screens (may stack on a phone in portrait)
+- four or more cells → a grid (verified 2×2 with four images)
+
+Keep a blank line between elements you want in separate cells. A heading immediately
+followed by an image with no blank line is one cramped cell, not two.
+
 ### Stacked Layout (Default)
 
 Content stacks vertically:
@@ -342,7 +354,7 @@ Any key works as long as it begins with `#`. Keep the definition flush-left.
 
 When you reference a local image file, iA Presenter needs permission to use it. Add local images through the **Media Manager** (drag-and-drop or copy-paste) so the app can resolve and bundle the file. A path that was never added to the Media Manager is the most common reason a local image silently fails to appear.
 
-External URLs and the illustrative `/assets/...` paths in this corpus do not require this step.
+Do not reach for a remote `http(s)` URL as a workaround — iA Presenter does not fetch them, and the image renders as nothing. The only reliable form is a bundled file referenced root-relative: `/assets/photo.png` with the file at `<package>/assets/photo.png`. Inside a `.iapresenter` package, **bundling the file is what grants access**; the Media Manager step above applies when you add a local file to a deck from inside the app.
 
 ---
 
@@ -481,7 +493,7 @@ This image illustrates our core concept.
 | Bold | `**text**` | As positioned |
 | Italic | `*text*` | As positioned |
 | Link | `[text](url)` | As positioned |
-| Image | `![alt](path)` | As positioned |
+| Image | `![alt](/assets/file.png)` — leading slash + file bundled | Always (never TAB it) |
 
 ---
 

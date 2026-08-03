@@ -14,6 +14,8 @@ These are rhetorical templates, not rigid slide counts.
 8. decision / next step
 
 Good surface mix:
+- a full-bleed image opener and a full-bleed image closer
+- one full-bleed image at the narrative turn
 - sharp cover
 - quote or customer-voice slide
 - one crisp comparison
@@ -32,6 +34,8 @@ Good surface mix:
 8. what success looks like next
 
 Good surface mix:
+- a full-bleed image opener and a full-bleed image closer
+- one full-bleed image at the narrative turn
 - short-version slide
 - one before / after or stop / start contrast
 - one exact proof table
@@ -48,6 +52,8 @@ Good surface mix:
 7. practice / action
 
 Good surface mix:
+- a full-bleed image opener and a full-bleed image closer
+- one full-bleed image at the narrative turn
 - agenda
 - weak / strong contrast
 - ladder or sequence slide
@@ -66,6 +72,8 @@ Good surface mix:
 9. closing line
 
 Good surface mix:
+- a full-bleed image opener and a full-bleed image closer
+- one full-bleed image at the narrative turn
 - scene-setting cover or image
 - before / after contrast
 - one refusal or principle slide
@@ -92,3 +100,9 @@ Use only when a table is the fastest way to show movement. Keep it tiny.
 ### Sequence
 
 Use when order matters. Prefer 3-4 steps, not 8.
+
+### Full-Bleed Image
+
+An image alone in its own cell fills the slide. Use it for the opener, the closer,
+and each turn. `![Alt](/assets/x.png)`, flush-left, file bundled. Generate one with
+`tools/genbg.py` if no photo exists. This is the default surface, not a special case.

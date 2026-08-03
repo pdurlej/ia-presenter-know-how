@@ -77,7 +77,9 @@ Good for:
 ### 6. Proof Table
 
 Use:
-- a very small TAB-prefixed table
+- a very small table, written flush-left with NO TAB on any row
+  (a TAB makes iA render the table as an indented code block, not a grid — linter rule E001)
+- at most 3 columns x 4 rows; if it needs more, it is a handout, not a slide
 
 Good for:
 - exact deltas
@@ -90,15 +92,22 @@ Do not use when:
 ### 7. Image or Background Slide
 
 Use:
-- `/assets/...`
-- `size: contain` or `background: true`
+- `![Alt text](/assets/photo.png)` flush-left, with the file bundled at
+  `<package>/assets/photo.png` — the leading `/` is mandatory, and a remote
+  `http(s)` URL renders nothing at all
+- an image ALONE in its own cell — that is the full-bleed move; it fills the slide
+
+Do NOT write trailing `size:` / `background:` / `opacity:` / `filter:` lines.
+Those are in-app content-block settings, not plain Markdown, and may render as
+literal text on the slide. A generated deck must never depend on them.
 
 Good for:
-- mood
-- scene-setting
-- visual contrast between text-heavy moments
+- the opener and the closer (use one at each)
+- every narrative turn
+- mood, scene-setting, and rhythm between text-heavy moments
 
-Only use when a real image helps the argument.
+This is the default surface, not a garnish. If no photo exists, generate one:
+`python3 tools/genbg.py <deck>.iapresenter/assets --palette ink`
 
 ### 8. One-Line Landing
 
