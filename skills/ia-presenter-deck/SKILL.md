@@ -23,6 +23,13 @@ Read as needed:
 - `references/TEMPLATES.md`
 - `references/LAYOUT-HEURISTICS.md`
 - `references/SLIDE-SURFACE-PATTERNS.md`
+- `references/VISUAL-DESIGN.md` — making a deck look presentable, not document-like
+- `references/LAYOUT-ENGINE.md` — how cells drive iA's automatic layouts
+- `references/THEMES.md` — choosing the theme in `info.json`
+
+Tooling in the repo:
+- `python3 tools/ialint.py <package>` — lint for render-breaking mistakes
+- `python3 tools/genbg.py <package>/assets --palette <name>` — generate full-bleed background images
 
 ## Output Contract
 
@@ -52,6 +59,9 @@ Do not promise or default to:
 6. Prefer strong, punchy slide titles over generic topic labels.
 7. Use full assertion-style headings only when precision matters more than punch.
 8. End with a real action, decision, or landing line. Do not end on generic `Thank you` or `Questions`.
+9. Art-direct every deck: pick a theme in `info.json` to fit the room (never default to the minimal white theme), and make images the backbone — open/close on a full-bleed image and use them at the turns. See `references/VISUAL-DESIGN.md` and `references/THEMES.md`.
+10. Images must be flush-left, root-relative (`/assets/x.png`), and bundled in the package. No leading slash or a remote URL renders nothing. Generate backgrounds with `tools/genbg.py` when no photos are available.
+11. Aim for an editorial look, not a decorated one. Do not try to match PowerPoint's visual variety — iA's win is a talk-first deck a person can present without shame, fast. If the user needs a dazzling standalone artifact with no speaker, say so and point them to PowerPoint.
 
 ## Candidate Mode
 

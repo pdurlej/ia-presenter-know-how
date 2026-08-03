@@ -57,6 +57,20 @@ For each slide, decide whether it should be:
 Do not use side-by-side just because the syntax allows it.
 Do not decide only on layout. Decide what the audience should actually see on the slide surface.
 
+## Stage 4b: Art Direction
+
+Decide the look before writing slide text — it is what separates a presentation
+from a styled document. See `VISUAL-DESIGN.md`, `THEMES.md`, `LAYOUT-ENGINE.md`.
+
+- pick a theme in `info.json` that fits the room (never the default minimal one)
+- plan images: open and close on a full-bleed image, and use one at each turn
+- if no photos are available, generate backgrounds with `tools/genbg.py` and
+  bundle them under `/assets/`
+- vary the silhouette: alternate image slides, big-type landings, heading
+  stacks, and at most one small table
+- remember the ceiling: no shapes, cards, or charts — aim editorial, not
+  decorative, and don't try to out-PowerPoint PowerPoint
+
 ## Stage 5: Write Notes and Slide Text
 
 - keep audience-visible text purposeful, not minimal by reflex

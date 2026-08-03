@@ -59,3 +59,29 @@ rules an LLM can't observe into checks it can act on.
 2. **Image paths are root-relative and bundled.** `![alt](/assets/photo.png)`
    with the file at `<package>/assets/photo.png`. No leading slash → literal
    text. Remote URL → nothing.
+
+---
+
+## `genbg.py` — generate abstract background images
+
+iA Presenter won't fetch remote image URLs, and an LLM has no photos of its own.
+But it *can* generate clean abstract gradient backgrounds and bundle them —
+full-bleed colour and texture with zero external assets. This is the
+LLM-autonomous path to making a deck feel like a presentation, not a document.
+
+```bash
+# named palette into a package's assets/ folder
+python3 tools/genbg.py mydeck.iapresenter/assets --palette indigo
+
+# custom two-colour diagonal gradient
+python3 tools/genbg.py mydeck.iapresenter/assets --name cover --from 16223D --to F9615F
+
+# list palettes
+python3 tools/genbg.py --list
+```
+
+Then reference it root-relative in the deck: `![Mood](/assets/indigo.png)`.
+
+Palettes: `indigo`, `plum`, `ink`, `teal`, `ember`, `forest`, `slate`, `gold`.
+Dependency-free (stdlib only). See `references/VISUAL-DESIGN.md` for how to use
+backgrounds for rhythm and section breaks.
