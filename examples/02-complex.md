@@ -145,21 +145,25 @@ No TABs here — headings are visible by default. I use `###` for the main thoug
 
 ## One image, one job
 
-	![A wide, calm landscape](/assets/landscape.jpg)
-	size: contain
+![A wide, calm landscape](/assets/landscape.jpg)
 
-A picture should advance the argument, not decorate it. In this repo `/assets/` paths are illustrative — the files aren't bundled.
+A picture should advance the argument, not decorate it. The image is flush-left and the path starts with `/` — both are required, and the file has to be bundled in the package or nothing appears.
 
 ---
 
-## Set the mood with a filter
+## An image alone owns the slide
 
-	![A muted background scene](/assets/scene.jpg)
-	size: cover
-	filter: grayscale
-	opacity: 0.7
+![A quiet street at dawn](/assets/scene.jpg)
 
-Use `size`, `filter`, and `opacity` to keep an image from shouting over the words. (Some image attributes depend on iA Presenter's content-block handling — check the syntax reference.)
+When an image is the only thing in its cell, it fills the slide. That is the strongest visual move iA Presenter gives me, and it costs one line. I say the point out loud instead of writing it on top of the picture.
+
+---
+
+## A caption when the picture needs a name
+
+/assets/diagram.jpg "How the three parts fit together"
+
+A bare path with a caption in straight quotes is the content-block form. Use it when the audience needs to know *what* they are looking at.
 
 ---
 
