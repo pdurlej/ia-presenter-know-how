@@ -45,6 +45,32 @@ on warnings (useful in CI).
 | W106 | More than ~6 list items in one block |
 | W110 | `info.json` has no template/preset (falls back to default theme) |
 
+### Suppressing rules
+
+Some files are *deliberately* wrong — an anti-pattern catalogue has to show the
+broken form. Switch rules off with an HTML comment, which stays invisible both in
+rendered Markdown and in iA Presenter:
+
+```markdown
+<!-- ialint-disable -->                   disable every rule in this file
+<!-- ialint-disable E001,W106 -->         disable only these codes in this file
+<!-- ialint-disable-next-line E003 -->    disable for the following line only
+```
+
+`examples/03-anti-patterns.md` uses the file-level form.
+
+### Continuous integration
+
+`.github/workflows/lint-decks.yml` runs on every pull request and on `master`:
+
+1. unit-tests the linter (`python3 -m unittest discover -s tests`)
+2. lints every example and golden candidate
+3. smoke-tests `genbg.py`
+
+The gate is **errors only** — warnings are advisory and do not fail the build.
+Because the linter now decides whether the corpus is publishable, it has its own
+test suite in `tests/test_ialint.py`; add a test there with any new rule.
+
 ### Why this matters for LLM-generated decks
 
 iA Presenter abstracts visual design away from the text, so an LLM cannot "see"

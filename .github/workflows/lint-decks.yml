@@ -1,0 +1,38 @@
+name: Lint decks
+
+# The corpus teaches LLMs rules that were established by live testing in iA
+# Presenter. This workflow makes those rules enforced rather than aspirational:
+# if an example or golden candidate regresses to a form that renders wrong,
+# the PR goes red.
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  ialint:
+    name: ialint + unit tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Unit-test the linter
+        run: python3 -m unittest discover -s tests -v
+
+      - name: Lint examples and golden candidates
+        run: |
+          python3 tools/ialint.py \
+            examples/*.md \
+            examples/*.iapresenter \
+            golden-candidates/*.iapresenter
+
+      - name: Check the background generator still runs
+        run: |
+          python3 tools/genbg.py --list
+          python3 tools/genbg.py "${RUNNER_TEMP}/bgcheck" --palette ink --size 320x180

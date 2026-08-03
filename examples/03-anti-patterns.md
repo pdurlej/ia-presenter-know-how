@@ -1,6 +1,10 @@
 # Anti-Patterns: Common Mistakes to Avoid
 
 > **This document demonstrates common mistakes in iA Presenter. DO NOT use these patterns in your presentations.**
+>
+> Every broken pattern below is intentional, so the linter is switched off for this file.
+
+<!-- ialint-disable -->
 
 ---
 

@@ -13,6 +13,16 @@ Usage:
 Exit code: 1 if any ERROR-level finding, else 0. Use --strict to also fail on
 warnings.
 
+Suppressing rules (for files that are deliberately wrong, e.g. an anti-pattern
+catalogue):
+
+    <!-- ialint-disable -->               disable every rule in this file
+    <!-- ialint-disable E001,W106 -->     disable only these codes in this file
+    <!-- ialint-disable-next-line E001 -->  disable for the following line only
+
+Put the comment anywhere in the file; it is an HTML comment, so it stays
+invisible in rendered Markdown and in iA Presenter.
+
 Rule reference:
   ERRORS (deck renders wrong)
     E001  table row is TAB-indented  -> renders as a code block, not a grid
@@ -49,6 +59,8 @@ HEADING_RE = re.compile(r'^(#{1,6})\s+(?P<text>.+?)\s*$')
 LIST_RE = re.compile(r'^\t+[ \t]*([-*+]|\d+\.)\s+\S')
 SPACE_INDENT_RE = re.compile(r'^ {1,}\S')
 CLOSING_RE = re.compile(r'\b(thank you|thanks|questions\??|q\s*&\s*a)\b', re.IGNORECASE)
+DISABLE_NEXT_RE = re.compile(r'<!--\s*ialint-disable-next-line(?:\s+([A-Za-z0-9,\s]+?))?\s*-->')
+DISABLE_FILE_RE = re.compile(r'<!--\s*ialint-disable(?!-next-line)(?:\s+([A-Za-z0-9,\s]+?))?\s*-->')
 GENERIC_TITLES = {
     "overview", "agenda", "introduction", "intro", "conclusion", "summary",
     "background", "key metrics", "next steps", "solution overview", "about us",
@@ -57,6 +69,13 @@ GENERIC_TITLES = {
 
 LEVEL_ERROR = "ERROR"
 LEVEL_WARN = "WARN"
+
+
+def _codes(group: str | None) -> set[str]:
+    """Parse the code list of an ialint-disable directive; bare directive = all."""
+    if not group or not group.strip():
+        return {"*"}
+    return {c.strip().upper() for c in group.split(",") if c.strip()}
 
 
 class Finding:
@@ -79,6 +98,18 @@ def lint_text(md: str, bundled: set[str] | None = None) -> list[Finding]:
     list_run = 0
     list_run_start = 0
     last_visible = None  # (lineno, text) of last heading or tabbed line
+
+    # Pre-pass: collect ialint-disable directives.
+    file_disabled: set[str] = set()
+    line_disabled: dict[int, set[str]] = {}
+    for i, raw in enumerate(lines, start=1):
+        m = DISABLE_NEXT_RE.search(raw)
+        if m:
+            line_disabled[i + 1] = _codes(m.group(1))
+            continue
+        m = DISABLE_FILE_RE.search(raw)
+        if m:
+            file_disabled |= _codes(m.group(1))
 
     def flush_list(end_line):
         nonlocal list_run, list_run_start
@@ -159,7 +190,13 @@ def lint_text(md: str, bundled: set[str] | None = None) -> list[Finding]:
         out.append(Finding(last_visible[0], "W104", LEVEL_WARN,
                            'deck ends on "Thank you / Questions"; close on a concrete action or landing line'))
 
-    return out
+    def suppressed(f: Finding) -> bool:
+        if "*" in file_disabled or f.code in file_disabled:
+            return True
+        here = line_disabled.get(f.line)
+        return bool(here) and ("*" in here or f.code in here)
+
+    return [f for f in out if not suppressed(f)]
 
 
 def _check_image_path(out, line, path, bundled):
@@ -199,7 +236,8 @@ def lint_package(path: str) -> tuple[list[Finding], str]:
         out.append(Finding(0, "E011", LEVEL_ERROR, "package is missing info.json"))
     else:
         try:
-            info = json.load(open(info_json, encoding="utf-8"))
+            with open(info_json, encoding="utf-8") as f:
+                info = json.load(f)
             block = info.get("net.ia.presenter", {})
             if not block.get("template") and not block.get("preset"):
                 out.append(Finding(0, "W110", LEVEL_WARN,
