@@ -439,7 +439,7 @@ This quote is about practice and dedication.
 ```markdown
 ## Visual Concept
 
-	![Concept](/assets/concept.jpg)
+![Concept](/assets/concept.jpg)
 
 This image illustrates our core concept.
 ```

@@ -8,12 +8,19 @@ This directory documents the path convention used by the examples. It now ships 
 
 ## Using images
 
+Images are **flush-left** (they are auto-visible — no TAB) and the path must be
+**root-relative, starting with `/`**, resolved against the package root:
+
 ```markdown
 ## Slide with Image
 
-	![Alt text](/assets/placeholder-16x9.svg)
-	size: contain
+![Alt text](/assets/placeholder-16x9.svg)
 ```
+
+Both rules are verified live, and getting either wrong shows nothing:
+
+- `photo.png` or `assets/photo.png` (no leading slash) render as **literal text**
+- a remote `http(s)` URL renders **nothing** — the file must be bundled
 
 Supported formats in iA Presenter typically include:
 - `.jpg` / `.jpeg`
@@ -22,12 +29,14 @@ Supported formats in iA Presenter typically include:
 - `.gif`
 - `.svg`
 
-Common image attributes (see `syntax/00-complete-reference.md` for the Markdown-vs-content-block detail):
-- `size: contain` / `size: cover`
-- `background: true`
-- `opacity: 0.5`
-- `filter: grayscale` (also `lighten`, `darken`, `sepia`, `blur`)
-- `position: center`
+### On image attributes
+
+iA Presenter can set `size` (cover/contain), `background`, `opacity`, `filter`,
+and `position` on an image — but those are **content-block / inspector**
+settings applied in the app, not plain-Markdown syntax. Do **not** write them as
+trailing `key: value` lines and expect them to take effect; a generated deck
+should not depend on them. For a full-bleed image, put the image alone in its
+own cell — it fills the slide on its own.
 
 ## Local images and the Media Manager
 

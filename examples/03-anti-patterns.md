@@ -99,7 +99,7 @@ This is overwhelming and boring.
 
 ## Cliché Visuals
 
-	![Generic business handshake](/assets/stock-handshake.jpg)
+![Generic business handshake](/assets/stock-handshake.jpg)
 
 This tells nothing about your actual content.
 
@@ -109,7 +109,7 @@ This tells nothing about your actual content.
 
 Use images that tell a story.
 
-	![Specific, meaningful image](/assets/meaningful.jpg)
+![Specific, meaningful image](/assets/meaningful.jpg)
 
 ---
 
