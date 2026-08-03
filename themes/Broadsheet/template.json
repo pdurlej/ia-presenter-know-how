@@ -1,0 +1,22 @@
+{
+  "Name": "Broadsheet",
+  "Version": 1,
+  "Author": "ia-presenter-know-how",
+  "ShortDescription": "Bold editorial. Hero display type, one accent, generous margins.",
+  "LongDescription": "A signature house style for talk-first decks.\n- Editorial serif titles, neutral sans body\n- Strict 1.5 type scale; hero headings at ~19% of slide height\n- One accent colour, paired per appearance so it passes contrast in both\n- Dark by default; a Light preset is included\n- No gradients, no decoration - the words and the images carry it",
+  "Css": "broadsheet.css",
+  "TitleFont": "Broadsheet Serif",
+  "BodyFont": "Broadsheet Sans",
+  "CssClasses": "variable-size-headings",
+  "Layouts": [],
+  "LayoutExamples": [
+    {
+      "Name": "Hero statement",
+      "Markdown": "###### FIELD NOTE\n\n# The queue is not the problem\n\n#### It never was"
+    },
+    {
+      "Name": "Image + claim",
+      "Markdown": "/Theme/template.png\n\n## Ninety seconds is the whole product\n\n#### median first response, Q3"
+    }
+  ]
+}

@@ -57,6 +57,34 @@ which are CSS-based and fully controllable:
   can carry CSS `Classes` (e.g. the grid `grid-items-2/3/4`).
 
 This is where a **signature "house style"** lives — the thing that makes every
-generated deck look like *the user's* deck, presentable without shame. A
-curated custom theme for this corpus is the next step after this playbook; when
-it lands it will be documented here with its exact files and install steps.
+generated deck look like *the user's* deck, presentable without shame.
+
+### The format, verified
+
+Checked byte-level against real published themes (iA's own Copenhagen and
+Helvetica, plus third-party themes on GitHub):
+
+- **There is no `.iatheme` archive.** A theme is a plain folder containing
+  `template.json`, `presets.json`, one `.css` file, and a `template.png`
+  thumbnail. Fonts, when used, are bundled inside the folder.
+- **iA's own JSON has trailing commas** — their parser is lenient. Write strict
+  JSON anyway.
+- **The `Dark*` / `Light*` prefix names the colour, and the appearance it is used
+  in matches that colour.** `DarkBodyTextColor` is dark-coloured ink, used in
+  *light* mode. `DarkBackgroundColor` is a dark background, used in *dark* mode.
+  Swapping the text pair yields invisible text.
+- **Do not invent a `vw`/`vh` type system.** The engine already sizes type with
+  container queries (`--font-size-scale: 3.7cqw`), clamps it, and hard-caps `h1`
+  at `2.9em` below 480px. Drive the scale through `--scale-factor-h1..h6`
+  instead; setting `font-size` on `h1..h6` directly does nothing, because the
+  engine neutralises bare element selectors.
+- Still unverified: whether `info.json`'s `template` resolves a custom theme by
+  its lowercased `Name` or by its folder name (make them identical and it does
+  not matter), and which appearance `DarkAccent1` drives.
+
+### The repo's theme
+
+`themes/Broadsheet/` is the corpus's signature theme — dark-first, editorial,
+hero-scale display type, one accent, measured contrast. `themes/README.md` has
+the install steps and four short experiments that settle the open questions
+above. Two probe decks ship in `themes/probes/`.

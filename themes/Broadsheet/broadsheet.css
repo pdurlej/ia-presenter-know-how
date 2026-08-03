@@ -1,0 +1,271 @@
+/* ============================================================
+   Broadsheet — a signature theme for iA Presenter
+   Bold editorial · hero display type · one accent · dark-first
+
+   Targets BOTH engines:
+     modern  → section .slide-contents .element-group
+     legacy  → section [class*="layout-"] > div
+
+   Nothing here uses vw/vh: the engine already sizes type with
+   container queries (--font-size-scale: 3.7cqw) and clamps it on
+   phones. Riding that machinery is what makes the scale correct
+   on a projector, a laptop and a phone at the same time.
+   ============================================================ */
+
+/* ---------- 1. TYPE SCALE ------------------------------------
+   Do NOT set font-size on h1..h6 directly: the engine neutralises
+   bare element selectors (`h1,h2,…{font-size:inherit}`) and owns
+   the responsive computation. Drive it through scale factors.
+   Strict 1.5 (perfect fifth) ratio anchored on body.
+   Derivation: h{n}-adjusted = (64 + 2 + offset[n] x I) x SF[n]   */
+:root {
+  --scale-factor-h1: 2.25;   /* 2.880em · 3.37x body · ~18.9% of slide height */
+  --scale-factor-h2: 1.80;   /* 1.920em · 2.25x body */
+  --scale-factor-h3: 1.45;   /* 1.276em · 1.50x body */
+  --scale-factor-h4: 1.33;   /* 0.851em · 1.00x body — the qualifier line */
+  --scale-factor-h5: 1.28;   /* 0.683em · 0.80x body */
+  --scale-factor-h6: 1.34;   /* 0.572em · 0.67x body — the eyebrow/kicker */
+  --scale-factor-blockquote: 1.60;  /* 1.536em · 1.80x body — pull-quote */
+  --scale-factor-td: 0.80;   /* tables read small on purpose */
+  --scale-factor-th: 0.68;
+
+  /* ---------- 2. WEIGHT ---------------------------------------
+     Editorial: display is heavy, body is regular. Keep a 200-300
+     unit gap so the hierarchy registers. Never below 300 — thin
+     strokes vanish on a washed-out projector.                    */
+  --font-weight-h1: 700;
+  --font-weight-h2: 700;
+  --font-weight-h3: 600;
+  --font-weight-h4: 400;
+  --font-weight-h5: 600;
+  --font-weight-h6: 700;
+  --font-weight-p: 400;
+  --font-weight-header-and-footer: 400;
+
+  /* ---------- 3. LEADING --------------------------------------
+     Display tightens as it grows; body opens up. Body sits at
+     1.45 so a user override to 1.5 (WCAG 1.4.12) breaks nothing. */
+  --line-height-h1: 1.02;
+  --line-height-h2: 1.08;
+  --line-height-h3: 1.18;
+  --line-height-h4: 1.30;
+  --line-height-h5: 1.30;
+  --line-height-h6: 1.30;
+  --line-height-p:  1.45;
+
+  /* ---------- 4. TRACKING -------------------------------------
+     Negative at display sizes (sidebearings drawn for text sizes
+     read loose when enlarged); strongly positive for the all-caps
+     eyebrow, which has no ascender/descender interlock.          */
+  --letter-spacing-h1: -2.5%;
+  --letter-spacing-h2: -2%;
+  --letter-spacing-h3: -1.2%;
+  --letter-spacing-h4: 0%;
+  --letter-spacing-h5: 0%;
+  --letter-spacing-h6: 9%;
+  --letter-spacing-p:  0.3%;
+
+  /* ---------- 5. CASE -----------------------------------------
+     All-caps ONLY for the h6 eyebrow. The research is
+     length-dependent: caps wins for 1-3 word labels near the
+     acuity limit and loses for anything sentence-length.
+     Never all-caps a hero.                                       */
+  --case-h1: inherit;
+  --case-h2: inherit;
+  --case-h3: inherit;
+  --case-h4: inherit;
+  --case-h5: inherit;
+  --case-h6: uppercase;
+  --case-p:  inherit;
+
+  /* ---------- 6. RHYTHM & MARGINS -----------------------------
+     One dial scales ALL engine padding (X, Y and every _70/_90/
+     _100/_110 variant): --padding-scale-px-size. Engine default
+     20.5 → 4.78cqw / 6.83cqw. 18.5 → 5.30cqw (9.4% of slide
+     height) and 7.57cqw (13.5%). Editorial, not broadcast.       */
+  --padding-scale-px-size: 18.5;
+  --paragraph-spacing: 0.65em;
+  --paragraph-indentation: 0;
+  --margin-h1: 0.14em;
+  --margin-h2: 0.14em;
+  --margin-h6: 0.55em;   /* the eyebrow needs air under it */
+
+  /* ---------- 7. ALIGNMENT ------------------------------------
+     Editorial = flush left, optically centred vertically.
+     Ragged right (never justify — rivers hurt readers with
+     certain cognitive disabilities, WCAG 1.4.8).                 */
+  --text-horizontal-align-layout-cover:   left;
+  --text-vertical-align-layout-cover:     center;
+  --text-horizontal-align-layout-title:   left;
+  --text-vertical-align-layout-title:     center;
+  --text-horizontal-align-layout-section: left;
+  --text-vertical-align-layout-section:   center;
+  --text-horizontal-align-layout-default: left;
+  --text-vertical-align-layout-default:   center;
+  --text-horizontal-align-layout-caption: left;
+  --text-vertical-align-layout-split:     center;
+
+  /* ---------- 8. CHROME ---------------------------------------
+     Signal-to-noise: a logo that shouts on every content slide is
+     noise. Keep it small.                                        */
+  --max-logo-height: 3.2em;
+  --min-logo-height: 0.1em;
+  --font-size-header-footer: 0.26em;
+
+  /* ---------- 9. TABLE RULES ----------------------------------
+     Tufte: erase non-data-ink. Hairlines only, no grid.          */
+  --border-table-width: 0.03em;
+  --border-row-width: 0.02em;
+
+  /* ---------- 10. CODE (all 24, matching the engine's set) ---- */
+  --code-background: #F1EFE9;
+  --code-border:     #E2DFD7;
+  --code-text:       #2B2B2B;
+  --code-comment:    #8A8A82;
+  --code-type:       #A03040;
+  --code-include:    #7C3A86;
+  --code-string:     #5D5391;
+  --code-class-name: #3F5E9E;
+  --code-numbers:    #8F7620;
+  --code-variables:  #3A7BB8;
+  --code-functions:  #C04E96;
+  --code-literal:    #C4551A;
+
+  --dark-code-background: #1E1E24;
+  --dark-code-border:     #2B2B33;
+  --dark-code-text:       #E8E6E0;
+  --dark-code-comment:    #7E7E88;
+  --dark-code-type:       #F09AA6;
+  --dark-code-include:    #C79ACB;
+  --dark-code-string:     #A79EC9;
+  --dark-code-class-name: #96A7CD;
+  --dark-code-numbers:    #E9D874;
+  --dark-code-variables:  #79B7E5;
+  --dark-code-functions:  #E18FC2;
+  --dark-code-literal:    #F7BB9C;
+}
+
+/* ---------- 11. THE ACCENT ----------------------------------
+   Nothing in EITHER engine stylesheet reads --accent1..6 or
+   --darkaccent1color/--lightaccent1color (verified: 0 occurrences).
+   Accents are a theme-CSS-only convention, so we resolve them here.
+
+   UNRESOLVED: whether presets.json "DarkAccent1" means the accent
+   for DARK MODE (Copenhagen's values imply this) or a DARK-COLOURED
+   accent used in LIGHT mode (the text/background convention).
+   We follow Copenhagen. Both hexes clear 3:1 either way, so a wrong
+   guess degrades to "slightly low-contrast", never to "broken".
+   Settle it with experiment E2 in themes/README.md.              */
+section.light, .backgrounds .slide-background.light {
+  --sig-accent: var(--lightaccent1color, #E50026);
+  --sig-muted:  #6B6B6B;   /* 5.10:1 on #FAFAF8 */
+  --sig-hair:   rgba(17, 17, 20, 0.14);
+}
+section.dark, .backgrounds .slide-background.dark {
+  --sig-accent: var(--darkaccent1color, #FF3B30);
+  --sig-muted:  #9A9A9A;   /* 6.41:1 on #16161A */
+  --sig-hair:   rgba(237, 235, 230, 0.16);
+}
+
+/* Signalling principle: ONE emphasis per slide. These are the only
+   places the accent is allowed to appear.
+   Specificity note: the engine sets `section.light strong{…}` (0,1,2);
+   adding .element-group / [class*="layout-"] takes us to (0,2,2).  */
+section .slide-contents .element-group strong,
+section [class*="layout-"] > div strong { color: var(--sig-accent); }
+
+section .slide-contents .element-group a,
+section [class*="layout-"] > div a {
+  color: var(--sig-accent);
+  text-decoration-color: var(--sig-accent);
+  text-underline-offset: 0.14em;
+}
+
+section .slide-contents .element-group h6,
+section [class*="layout-"] > div h6 { color: var(--sig-accent); }
+
+section .slide-contents .element-group blockquote,
+section [class*="layout-"] > div blockquote {
+  border-left: 0.10em solid var(--sig-accent);
+  padding-left: 0.6em;
+  font-style: normal;          /* editorial pull-quote, not a letter */
+  quotes: none;
+}
+
+section .slide-contents .element-group li::marker,
+section [class*="layout-"] > div li::marker { color: var(--sig-accent); }
+
+/* ---------- 12. TABLES: hairlines, no grid ------------------- */
+section .slide-contents .element-group table,
+section [class*="layout-"] > div table { border-collapse: collapse; }
+
+section .slide-contents .element-group th,
+section [class*="layout-"] > div th {
+  border: 0;
+  border-bottom: 0.07em solid var(--sig-accent);
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 7%;
+  padding: 0.35em 1.1em 0.35em 0;
+}
+
+section .slide-contents .element-group td,
+section [class*="layout-"] > div td {
+  border: 0;
+  border-bottom: 0.02em solid var(--sig-hair);
+  padding: 0.35em 1.1em 0.35em 0;
+}
+
+/* ---------- 13. FIGURE CAPTIONS ------------------------------
+   Spatial contiguity: the caption sits ON the image, not adrift. */
+section figure figcaption {
+  background: rgba(0, 0, 0, 0.55);
+  color: #F7F5F0;
+  letter-spacing: 2%;
+  font-weight: 500;
+}
+
+/* ---------- 14. LEGACY-ENGINE FALLBACKS ---------------------
+   The older engine has no --scale-factor-* / --case-* /
+   --letter-spacing-* API (0 occurrences of "slide-contents" or
+   "element-group"; it uses .variable-size-headings and
+   [class*="layout-"] > div instead). These em multiples reproduce
+   the same ratios there.                                        */
+.variable-size-headings [class*="layout-"] > div h1 {
+  font-size: 2.88em; line-height: 1.02; letter-spacing: -0.025em; font-weight: 700;
+}
+.variable-size-headings [class*="layout-"] > div h2 {
+  font-size: 1.92em; line-height: 1.08; letter-spacing: -0.02em;  font-weight: 700;
+}
+.variable-size-headings [class*="layout-"] > div h3 {
+  font-size: 1.28em; line-height: 1.18; letter-spacing: -0.012em; font-weight: 600;
+}
+.variable-size-headings [class*="layout-"] > div h4 {
+  font-size: 0.85em; line-height: 1.30; font-weight: 400;
+}
+.variable-size-headings [class*="layout-"] > div h6 {
+  font-size: 0.57em; line-height: 1.30; letter-spacing: 0.09em;
+  text-transform: uppercase; font-weight: 700;
+}
+
+/* Legacy alignment: the layout div is a COLUMN flex container, so the
+   axes are swapped relative to normal flex-row intuition.
+   justify-content = vertical, align-items = horizontal.          */
+.layout-cover > div, .layout-title > div,
+.layout-section > div, .layout-default > div {
+  justify-content: center;   /* vertical   */
+  align-items: flex-start;   /* horizontal */
+}
+
+/* ---------- 15. PHONE GUARD ---------------------------------
+   The engine already re-derives everything under 480px and hard-caps
+   h1 at 2.9em. Do NOT re-scale here. Only relax tracking, which is
+   drawn for large sizes and becomes a legibility cost when small.  */
+@media (max-width: 480px) {
+  :root {
+    --letter-spacing-h1: -1%;
+    --letter-spacing-h2: -0.8%;
+    --letter-spacing-h3: 0%;
+    --padding-scale-px-size: 20.5;   /* engine default; a phone has no room to spare */
+  }
+}

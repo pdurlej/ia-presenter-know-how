@@ -25,12 +25,21 @@ jobs:
       - name: Unit-test the linter
         run: python3 -m unittest discover -s tests -v
 
-      - name: Lint examples and golden candidates
+      - name: Lint examples, golden candidates and theme probes
         run: |
           python3 tools/ialint.py \
             examples/*.md \
             examples/*.iapresenter \
-            golden-candidates/*.iapresenter
+            golden-candidates/*.iapresenter \
+            themes/probes/*.iapresenter
+
+      - name: Validate theme JSON
+        run: |
+          python3 -c "
+          import json, sys
+          for f in ['themes/Broadsheet/template.json', 'themes/Broadsheet/presets.json']:
+              json.load(open(f)); print(f, 'OK')
+          "
 
       - name: Check the background generator still runs
         run: |
