@@ -1,0 +1,48 @@
+{
+  "Presets": [
+    {
+      "Name": "Default",
+      "TitleFont": "ui-serif, -apple-system-ui-serif, \"New York\", \"Iowan Old Style\", Charter, Georgia, serif",
+      "BodyFont": "system-ui, -apple-system, \"SF Pro Text\", \"Helvetica Neue\", Inter, Arial, sans-serif",
+      "Appearance": "dark",
+      "DarkBodyTextColor": "#1A1A1A",
+      "LightBodyTextColor": "#EDEBE6",
+      "DarkTitleTextColor": "#111114",
+      "LightTitleTextColor": "#F7F5F0",
+      "DarkBackgroundColor": "#16161A",
+      "LightBackgroundColor": "#FAFAF8",
+      "DarkFrameColor": "#16161A",
+      "LightFrameColor": "#FAFAF8",
+      "DarkAccent1": "#FF3B30",
+      "LightAccent1": "#E50026",
+      "Accent1": "#E50026",
+      "Accent2": "#333333",
+      "Accent3": "#666666",
+      "Accent4": "#999999",
+      "Accent5": "#CCCCCC",
+      "Accent6": "#EEEEEE"
+    },
+    {
+      "Name": "Paper",
+      "TitleFont": "ui-serif, -apple-system-ui-serif, \"New York\", \"Iowan Old Style\", Charter, Georgia, serif",
+      "BodyFont": "system-ui, -apple-system, \"SF Pro Text\", \"Helvetica Neue\", Inter, Arial, sans-serif",
+      "Appearance": "light",
+      "DarkBodyTextColor": "#1A1A1A",
+      "LightBodyTextColor": "#EDEBE6",
+      "DarkTitleTextColor": "#111114",
+      "LightTitleTextColor": "#F7F5F0",
+      "DarkBackgroundColor": "#16161A",
+      "LightBackgroundColor": "#FAFAF8",
+      "DarkFrameColor": "#16161A",
+      "LightFrameColor": "#FAFAF8",
+      "DarkAccent1": "#FF3B30",
+      "LightAccent1": "#E50026",
+      "Accent1": "#E50026",
+      "Accent2": "#333333",
+      "Accent3": "#666666",
+      "Accent4": "#999999",
+      "Accent5": "#CCCCCC",
+      "Accent6": "#EEEEEE"
+    }
+  ]
+}
