@@ -1,2 +1,8 @@
 .DS_Store
 
+# Python bytecode — tests import tools/ialint.py, which generates these
+__pycache__/
+*.py[cod]
+
+# genbg scratch output when run outside a package
+/tmp-bg/
